@@ -1,0 +1,296 @@
+body
+{
+    
+    margin:0px;
+    height:100%;
+    background:linear-gradient(to right,rgba(51, 0, 255, 0.792),rgba(0, 217, 255, 0.341))
+}
+.canvis
+{
+    border:1px solid black;
+}
+.header
+{
+    display:flex;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.103);
+    font-family:'Times New Roman', Times, serif;
+    color:rgb(0, 0, 0);
+    width:100%;
+    font-size:20px;
+    height:50px;
+    border-bottom: 1px solid rgba(51, 0, 255, 0.141);
+    justify-content: space-between;
+    align-items: center;
+    z-index:999;
+    transition:0.2s;
+}
+.header:hover
+{
+    background-color:rgba(51, 0, 255, 0.318)
+}
+.options
+{
+    color:rgba(0, 0, 0, 0.734);
+    transition: 0.2s;
+}
+.options:hover
+{
+    color:rgb(0, 0, 0);
+    font-size:26px;
+    
+}
+.gallary
+{
+    color:rgba(0, 0, 0, 0.734);
+    display:flex;
+    align-items: center;
+   
+    transition:0.2s;
+}
+.linkOpts
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    color:black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.639);
+    z-index: 1;
+    transition:0.2;
+}
+.linkOpts label 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition:0.2s;
+}
+.gallDrop
+{
+    position:relative;
+    display:inline-block;
+    text-decoration: center;
+}
+.gallDrop:hover .linkOpts 
+{
+    display: block;
+    transition:0.2s;
+}
+.l1
+{
+    background-color:rgb(255,255,255);
+    transition:0.2s
+}
+.l1:hover
+{
+    background-color: rgba(51, 0, 255, 0.318);
+}
+.gallDrop:hover .gallary
+{
+    color:rgb(0, 0, 0);
+    font-size:26px;
+}
+.quote
+{
+    
+    display:flex;
+    align-items: center;
+    background-color: rgb(51, 0, 255);
+    color:rgb(255, 255, 255);
+    font-size:25px;
+    padding-left:30px;
+    padding-right:30px;
+    transition:0.2s;
+}
+.phone
+{
+    transition:0.2s;
+    padding-left:8px;
+    font-size:15px;
+    color:rgba(0, 0, 0, 0.734);
+}
+.email
+{
+    transition:0.2s;
+    padding-right:8px;
+    font-size:15px;
+    color:rgba(0, 0, 0, 0.734);
+    border-right:3px solid rgba(255, 255, 255, 0.256);
+}
+.phone:hover
+{
+    font-size: 18px;
+    color:rgb(0, 0, 0);
+}
+.email:hover
+{
+    font-size: 18px;
+    color:rgb(0, 0, 0);
+}
+.borderL
+{
+    color:rgba(255, 255, 255, 0.09);
+}
+.quote:hover
+{
+    font-size:26px;
+    font-weight: bold;
+    
+    
+    background-color: rgb(51, 0, 255);
+}
+.info
+{
+    
+    padding-right:30px;
+}
+.menu
+{
+    display:block;
+    position:absolute;
+    margin-top:50px;
+    background-color:rgb(51, 0, 255);
+    width:100%;
+}
+.quoteDrop
+{
+    display:inline-block;
+    text-decoration: center;
+    position: relative;
+}
+.dataQ
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.639);
+    z-index: 1;
+}
+.quoteDrop:hover .dataQ
+{
+    display:block;
+}
+
+.welcome
+{
+    font-family:'Times New Roman', Times, serif;
+    font-size:50px;
+    color:rgba(0, 0, 0, 0.322);
+    position:fixed;
+    right:10px;
+    
+}
+.content
+{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:30px;
+    color: rgb(255,255,255);
+}
+.picDiv
+{
+    
+    width:100%;
+    height:300px;
+    display:flex;
+    align-items: center;
+    transition:1s;
+    position:relative;
+    z-index:2;
+    
+}
+.picDiv:hover
+{
+   
+}
+.img1
+{
+    
+    width:400px; 
+    height:400px; 
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    border-radius: 100px;
+    transition:1s;
+   
+}
+.img1:hover
+{
+    padding:30px;
+    border:1px solid black;
+    background-color:rgba(51, 0, 255, 0.414);
+   border-radius: 100px;
+}
+.serviced
+{
+    width:100%;
+    background-color:rgb(51, 0, 255);
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    border-top: 15px solid rgba(0, 217, 255, 0.547);
+    border-bottom: 15px solid rgba(0, 217, 255, 0.547);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:30px;
+}
+.servs
+{
+    display:block;
+    background-color:rgba(0, 217, 255, 0.547);
+    color:rgb(255, 255, 255);
+    height:80%;
+    width:20%;
+    border-radius:20px;
+    text-align: center;
+}
+.built
+{
+    display:block;
+    background-color:rgba(0, 217, 255, 0.547);
+    color:rgb(255, 255, 255);
+    height:80%;
+    width:20%;
+    border-radius:20px;
+    text-align: center;
+}
+.provs
+{
+    display:block;
+    background-color:rgba(0, 217, 255, 0.547);
+    color:rgb(255, 255, 255);
+    height:80%;
+    width:20%;
+    border-radius:20px;
+    text-align: center;
+    
+}
+.cities
+{
+    display:block;
+    background-color:rgba(0, 217, 255, 0.547);
+    color:rgb(255, 255, 255);
+    height:80%;
+    width:20%;
+    border-radius:20px;
+    text-align: center;
+    
+}
+.divs
+{
+    
+    height:2500px; 
+    width:100%;
+    position:absolute;
+    z-index:5;
+    background-color:rgba(0, 0, 0, 0.356);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:70px;
+    color:rgba(255, 255, 255, 0.587);
+}
