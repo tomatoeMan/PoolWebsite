@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/Css.css">
+        
+        <title>WS-Pools</title></head>
+    <body>
+        <link href="https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+            <div class="header">
+                <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
+                    <label class="quote"style="margin-top:10px;">Get a quote</label>
+                    <div class="linkOpts">
+                        <label class="l1" onclick="onlineQuote()">Online Quote</label>
+                        <label class="l1">Book a Quote</label>
+                    </div>
+                </div>
+                    <div class="gallDrop">
+                        <label class="gallary">Gallary</label>
+                        <div class="linkOpts">
+                            <label class="l1">Serviced Pools</label>
+                            <label class="l1">Re-furbished Pools</label>
+                            <label class="l1">Built Pools</label>
+                        </div>
+                    </div>    
+                    <label class="borderL">|</label>
+                    <label class="options">About</label>
+                    <label class="borderL">|</label>
+                    <label class="options">Contact</label>
+                
+                <div class="info">
+                    <label class="email">.....@gmail.com</label>
+                    <label class="phone">089 1234 789</label>
+                </div>
+            </div>
+            
+        
+            <div class="menu">
+                
+            </div><br><br><br>
+          
+            
+            
+            <label class="welcome" style="position:fixed;z-index:999;">WS-Pools</label><br>
+
+            
+            <img id="imgW1" style="height:100px; width:100%;position:relative;z-index:1;"></img>
+                <label style="text-align:center;display:block;position:relative; z-index:1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:80px;color:rgba(51, 0, 255, 0.729);">SWIMMING</label><br style="font-size:20px;">
+                <label style="top:1px;text-align:center;display:block;position:relative; z-index:1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:20px;color:rgba(51, 0, 255, 0.729);">Is an art and so are your pools</label><br>
+                <img id="imgW" style="height:100px; width:100%;position:relative;z-index:1;"></img><br><br>
+            <div class="picDiv">
+                    <img  src="img/2.jpg" class="img1"></img>
+                    <img  src="img/1.jpg" class="img1"></img>
+                    <img  src="img/3.jpg" class="img1"></img>
+                </div>
+            </div><br><br><br><br>
+            <div class="serviced">
+                
+                <div class="servs">
+                    <label style="margin-top:50%;">Active clients</label><br>
+                    <img style="width:65%; height:65%" src="img/leaf.png" ><img><br>
+                    <label id="servs"></label>
+                </div>
+                <div class="built">
+                    <label style="margin-top: 5%;">Number Built</label><br>
+                    <img style="width:65%; height:65%" src="img/built.png" ><img><br>
+                    <label id="built"></label>
+                </div>
+                <div class="cities">
+                    <label style="margin-top: 5%;">Cities Done</label><br>
+                    <img style="width:65%; height:65%" src="img/house.png" ><img><br>
+                    <label id="cities"></label>
+                </div>
+                <div class="provs">
+                    <label style="margin-top: 5%;">Provinces Done</label><br>
+                    <img style="width:65%; height:65%" src="img/town.png" ><img><br>
+                    <label id="provs"></label>
+                </div>
+                
+            </div>
+            <div></div>
+            
+                <img src="img/bg1.jpg" style="width:100%;position:absolute; z-index:1;"></img>
+                <img src="img/bg2.jpg" style="width:100%;position:absolute; z-index:1;margin-top:800px;"></img>
+                <img src="img/bg3.jpg" style="width:100%;position:absolute; z-index:1;margin-top:1600px;"></img>
+                <div class="divs">  
+                    <div style="margin-top:750px; background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
+                        <label style="text-align: center;">Tailor made</label>
+                    </div>
+                    <div style="margin-top:650px; background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
+                        <label style="text-align: center;">To perfection</label>
+                    </div>
+                </div>
+                
+            
+            
+            
+            <script>
+                    console.log("script");
+                    function onlineQuote()
+                    {
+                        window.location.href="file:///C:/Users/Joshua/Desktop/dummy/onlineQuote.html"
+                        //"https://clipart-library.com/clipart/790313.htm";
+                        console.log("Loading next page");
+                    }
+                    let once=false;
+                    if(once==false){
+                    window.addEventListener('scroll', function(event) {
+ // Get the current scroll position
+ const scroll = window.scrollY;
+ if(scroll>=390)
+ {
+    
+    if(once==false)
+    {
+        numbers();
+        once=true;
+    }
+
+ }
+ // Perform actions based on the scroll position
+ // …
+});}
+else
+{
+    window.addEventListener('scroll', function(event){console.log("no event")});
+}
+                function numbers()
+                {
+                    console.log("numbers");
+                    let built=document.getElementById("built");
+                    let servs=document.getElementById("servs");
+                    let cities=document.getElementById("cities");
+                    let provs=document.getElementById("provs");
+                    let b=0;
+                    let s=0;
+                    let c=0;
+                    let p=0;
+                    let x;
+                    function load()
+                    {
+                        built.innerHTML=b.toString();
+                        servs.innerHTML=s.toString();
+                        provs.innerHTML=p.toString();
+                        cities.innerHTML=c.toString();
+                        if(b<350)
+                        {
+                            b++;
+                        }
+                        if(c<=50)
+                        {
+                            c++;
+                        }
+                        if(p<=5)
+                        {
+                            p++;
+                        }
+                        if(s==600)
+                        {
+                            clearInterval(x);
+                        }
+                        s++;
+                        
+                        
+                    }
+                    x=setInterval(load,5);
+                }
+                
+                let c=1;
+                let fade;
+                let fadeI;
+                let o=1;
+                let canvas=document.createElement("canvas");
+                let divCan=document.createElement("canvas");
+                const ctx=canvas.getContext("2d");
+                const ctx1=divCan.getContext("2d");
+                divCan.width=window.innerWidth;
+                divCan.height=800;
+                canvas.width=window.innerWidth;
+                canvas.height=250;
+                let xE=window.innerWidth+100;
+                let xS=window.innerWidth/4;
+                let xS1=xS*3;
+                let y=20;
+                let yS=100;
+                let yS1=100;
+                let xM=-10;
+                let yM=100;
+                let yM1=100
+                let curve=100;
+                
+                function drawWaves()
+                {
+                    ctx.beginPath()
+                    ctx.moveTo(xM,yM1);
+                    const gradient = ctx.createLinearGradient(0, 0, 170, 0);
+                    gradient.addColorStop("0.7","rgb(0, 217, 255)");
+                    gradient.addColorStop("1.0","rgb(51, 0, 255)" );
+                    
+
+// Fill with gradient
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth=80;
+                    
+                    ctx.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);
+                    ctx.stroke();
+                    ctx.closePath()
+                    
+                    
+                    
+
+                    
+
+                   
+                    
+                }function draw1()
+                {
+                    ctx1.beginPath()
+                    ctx1.moveTo(xM-50,yM1);
+                    const gradient1 = ctx.createLinearGradient(0, 0, 170, 0);
+                    gradient1.addColorStop("0.7","rgb(0, 217, 255)");
+                    gradient1.addColorStop("1.0","rgb(51, 0, 255)" );
+                    
+
+// Fill with gradient
+                    ctx1.strokeStyle = gradient1;
+                    ctx1.lineWidth=200;
+                    
+                    ctx1.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);
+                    ctx1.stroke();
+                    ctx1.closePath()
+                }
+                let stopY=false;
+                let stopX=false;
+                let next=false;
+                function update()
+                {
+                    //canvas.setAttribute("style","background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);");
+                    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                    ctx.beginPath();
+                    ctx1.clearRect(0, 0, ctx1.canvas.width, ctx1.canvas.height);
+                    ctx1.beginPath();
+                    drawWaves();
+                    //draw1();
+                    if(yS>=0 && stopY!=true)
+                    {
+                        yS=yS+2;
+                       
+                        if(yS>=300)
+                        {
+                            stopY=true;
+                        }
+                    }
+                    if(yS<=310 && stopY!=false)
+                    {
+                        yS=yS-2;
+                        if(yS<=50)
+                        {
+                            stopY=false;
+                        }
+                    }
+                    if(xS<=window.innerWidth && stopX==false)
+                    {
+                        xS=xS+15;
+                        xS1=xS1-5;
+                        if(xS>=window.innerWidth)
+                        {
+                            stopX=true;
+                        }
+                    }
+                    if(xS>=window.innerWidth/4 && stopX==true)
+                    {
+                        xS=xS-15;
+                        xS1=xS1+5;
+                        if(xS<=window.innerWidth/4)
+                        {
+                            stopX=false;
+                        }
+                    }
+                    
+                    let image=canvas.toDataURL("image/png");
+                    let image1=divCan.toDataURL("image/png");
+                    
+                    document.getElementById("imgW").src=image;
+                    document.getElementById("imgW1").src=image;
+                    
+                    
+                    //margin-top:680px;height:250px; width:100%;position:absolute;z-index:3; background-repeat: no-repeat;
+                   // document.getElementById("div1").style.backgroundImage="url("+image1+")";
+                    //document.getElementById("div1").style.backgroundRepeat="no-repeat";
+                    requestAnimationFrame(update);
+                }
+                update();
+                function fadeOut()
+                {
+                    let imgId=document.getElementById("imgId");
+                    o=o-0.01;
+                    imgId.setAttribute("style","opacity:"+o.toString());
+                    if(o<=0)
+                    {
+                        c++;
+                        if(c==6)
+                        {
+                            c=1;
+                        }
+                        clearInterval(fade);
+                        imgId.src="img/"+c.toString()+".jpg";
+                        fadeI=setInterval(fadeIn,10);
+                    }
+                }
+                function timeOut()
+                {
+                    fade=setInterval(fadeOut,10);
+                }
+                //setTimeout(timeOut,3000);
+                function fadeIn()
+                {
+                    let imgId=document.getElementById("imgId");
+                    o=o+0.01;
+                    imgId.setAttribute("style","opacity:"+o.toString());
+                    if(o>=1)
+                    {
+                        clearInterval(fadeI);
+                        setTimeout(timeOut,3000);
+                    }
+                    
+                }
+            </script>
+    </body>
+</html>
