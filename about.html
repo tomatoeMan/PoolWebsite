@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Pool Company Name] - Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #2980b9;
+  color: white;
+  border-bottom: 2px solid #3498db;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #2980b9;
+}
+
+/* Section Styles */
+section {
+  display: none;
+  padding: 40px;
+  margin: 40px auto;
+  width: 85%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+section.active {
+  display: block;
+}
+
+/* About Section */
+#about h2 {
+  font-size: 2.5rem;
+  color: #2980b9;
+}
+
+#about h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+#about ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#about ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+  }
+
+  .nav-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to WS POOLS</h1>
+    <p>Your trusted partner for custom pool installations and maintenance</p>
+
+    <!-- Navigation Buttons -->
+    <div>
+      <button class="nav-button" onclick="toggleSection('about')"> About Us</button>
+      <button class="nav-button" onclick="toggleSection('contact')"> Contact Us</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are WS POOLS, your trusted partner in creating beautiful pools. We specialize in custom pool installations, maintenance, and everything you need for a stunning pool experience.</p>
+    
+    <h3>Our Mission</h3>
+    <p>At WS POOLS, we strive to provide high-quality pool installations with exceptional customer service. We bring your dream pool to life with passion, professionalism, and the latest technology in pool design.</p>
+
+    <h3>Services We Offer</h3>
+    <ul>
+      <li>Custom Pool Design & Installation</li>
+      <li>Pool Maintenance and Repairs</li>
+      <li>Outdoor Living Spaces and Landscaping</li>
+      <li>Pool Cleaning & Equipment Sales</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any pool installation inquiries or quotes!</p>
+    <form action="#" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 WS POOLS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to toggle the visibility of the sections
+    function toggleSection(sectionId) {
+      // Hide both sections
+      document.getElementById('about').classList.remove('active');
+      document.getElementById('contact').classList.remove('active');
+      
+      // Show the selected section
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    // Initially show the About section
+    window.onload = function() {
+      toggleSection('about');
+    };
+  </script>
+</body>
+</html>
