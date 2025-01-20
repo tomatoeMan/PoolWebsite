@@ -370,24 +370,58 @@
         }
         async function sendData()
         {
-            div();
-            no1.innerHTML="Your request has been sent";
-            
-            let button=document.createElement("button");
-            button.innerHTML="Another Quote";
-            button.setAttribute("class","submit");
-            button.setAttribute("onclick","createFirst()");
-            
-            let button1=document.createElement("button");
-            button1.innerHTML="Home Page";
-            button1.setAttribute("class","submit");
-            button1.setAttribute("onclick","homePage()");
-
-            document.getElementById("temp").appendChild(button);
-            document.getElementById("temp").appendChild(button1);
             let data=[document.getElementById("email").value,document.getElementById("fn").value,document.getElementById("ln").value,document.getElementById("cell").value];
-            console.log("Quote being sent to server:"+quote);
-            console.log(data);
+            let em=false;
+            let fn=false;
+            let ln=false;
+            let cell=false
+            if(data[0]!=undefined || data[0]!="")
+            {
+                em=true;
+            }
+            if(data[1]!=undefined || data[1]!="")
+            {
+                fn=true;
+            }
+            if(data[2]!=undefined || data[2]!=null || data[2]!="")
+            {
+                ln=true;
+            }
+            if(data[3]!=undefined || data[3]!=null || data[3]!="")
+            {
+                cell=true
+            }
+            if(cell==true && ln==true && em==true && fn==true)
+            {
+                div();
+                no1.innerHTML="Your request has been sent";
+            
+                let button=document.createElement("button");
+                button.innerHTML="Another Quote";
+                button.setAttribute("class","submit");
+                button.setAttribute("onclick","createFirst()");
+            
+                let button1=document.createElement("button");
+                button1.innerHTML="Home Page";
+                button1.setAttribute("class","submit");
+                button1.setAttribute("onclick","homePage()");
+
+                document.getElementById("temp").appendChild(button);
+                document.getElementById("temp").appendChild(button1);
+                console.log("Quote being sent to server:"+quote);
+                console.log(data);
+                if(building==true)
+                {
+                    building=false;
+                    quote[11]=data;
+                    quote=new Array();
+                }
+            }
+            else
+            {
+                no1.innerHTML="Please Finish the contact info";
+            }
+            
             
         }
         async function menu()
@@ -535,6 +569,306 @@
             console.log(pass);
             
         }
+        function last(color)
+        {
+            div();
+            no1.innerHTML="Is there anything we missed, you would like to add?";
+            //imgObj={box:box1,img:img1,label:l1};
+            //outer upPic infoOnly
+            color.img.setAttribute("class","colorsS");
+            let temp=document.getElementById("temp");
+            temp.setAttribute("style","font-size:45px;");
+            let img1=document.createElement("img");
+            img1.src=quote[1];
+
+            let poolPavers=document.createElement("label");
+            poolPavers.innerHTML="Pool Pavers<br>"+quote[3]+"<br>"
+            
+            let dim=document.createElement("label");
+            if(building==true)
+            {
+                dim.innerHTML="<br>"+quote[7][0]+"<br>"+quote[7][1]+"<br>"+quote[7][2];
+            }
+            let img2=document.createElement("img");
+            img2.src=quote[4];
+
+            let img3;
+            let l1;
+
+            let img4;
+            let l2;
+
+            let des;
+
+            let upload=false
+
+            let l4=document.createElement("label");
+            l4.innerHTML="Birds eye-view<br>Design to be Built<br>";
+
+            let box1=document.createElement("div");
+            box1.id="b1";
+            box1.setAttribute("class","box1");
+
+            let flex1=document.createElement("div");
+            flex1.id="f1";
+            flex1.setAttribute("class","divFlex");
+
+            document.getElementById("temp").appendChild(flex1);
+            document.getElementById("f1").appendChild(box1);
+            document.getElementById("b1").appendChild(l4);
+            document.getElementById("b1").appendChild(img1);
+            document.getElementById("b1").appendChild(dim);
+            if(outer==true)
+            {
+                upload=true;
+                img3=document.createElement("img");
+                img3.src=quote[5][1];
+
+                l1=document.createElement("label");
+                l1.innerHTML=quote[5][0]+"<br>";
+
+            }
+            else
+            {
+                l1=document.createElement("label");
+                l1.innerHTML=quote[5]+"<br>";
+                console.log(quote[5]);
+                upload=false;
+            }
+            console.log("Line 597 before condition");
+            if(upPic==true)
+            {
+                console.log("Line 600 in condition");
+                img4=document.createElement("img");
+                img4.src=quote[6][2];
+                l2=document.createElement("label");
+                let str=quote[6][1];
+                let spaced="";
+                let c=0;
+                console.log(str.length+" line 605");
+                let swap=false
+                for(let i=0;i<str.length;i++)
+                {
+                    let line=str.substr(i,1);
+                    console.log(line);
+                    if(line=="." || line=="?" || line=="!" || c>=25)
+                    {
+                        console.log(line);
+                        if(c!=25 && c<25)
+                        {
+                            spaced=spaced+line+"<br>";
+                        }
+                        else if(line!="." || line!="?" || line!="!")
+                        {
+                            spaced=spaced+"<br>-"+line;
+                            c=0;
+                        }
+                        
+                    }
+                    else
+                    {
+                        spaced=spaced+line;
+                    }
+                    c++;
+                }
+                l2.innerHTML="<br>"+spaced+"<br>";
+                des=document.createElement("label");
+                des.innerHTML="Sample picture of design<br>";
+            }
+            else
+            {
+                l2=document.createElement("label");
+                l2.innerHTML="Design Details<br><br>"+quote[6][1]+"<br>";
+            }
+
+            let Finish=document.createElement("label");
+            Finish.innerHTML="Finish<br>";
+
+            let mat=document.createElement("label");
+            mat.innerHTML=quote[8][0]+"<br>";
+            
+            
+            let flex2=document.createElement("div");
+            flex2.id="f2";
+            flex2.setAttribute("class","divFlex");
+
+            let box2=document.createElement("div")
+            box2.id="b2";
+            box2.setAttribute("class","box1");
+
+            let label=document.createElement("label");
+            label.innerHTML="Pool Pavers<br>"+quote[3]+"<br>";
+
+            document.getElementById("temp").appendChild(flex2);
+            document.getElementById("f2").appendChild(box2);
+            document.getElementById("b2").appendChild(label);
+            document.getElementById("b2").appendChild(img2);
+            
+            let flex3=document.createElement("div");
+            flex3.id="f3";
+            flex3.setAttribute("class","flexDiv");
+
+            let box3=document.createElement("div");
+            box3.id="b3";
+            box3.setAttribute("class","box1");
+
+            
+
+            if(outer==true)
+            {
+                document.getElementById("temp").appendChild(flex3);
+                document.getElementById("f3").appendChild(box3);
+                document.getElementById("b3").appendChild(l1);
+                document.getElementById("b3").appendChild(img3);
+            }
+            else
+            {
+                document.getElementById("temp").appendChild(flex3);
+                document.getElementById("f3").appendChild(box3);
+                document.getElementById("b3").appendChild(l1);
+            }
+
+            let flex4=document.createElement("div");
+            flex4.id="f4";
+            flex4.setAttribute("class","flexDiv");
+
+            let box4=document.createElement("div");
+            box4.id="b4";
+            box4.setAttribute("class","box1");
+
+            if(upPic==true)
+            {
+                document.getElementById("temp").appendChild(flex4);
+                document.getElementById("f4").appendChild(box4);
+                document.getElementById("b4").appendChild(des);
+                document.getElementById("b4").appendChild(img4);
+                document.getElementById("b4").appendChild(l2);
+            }
+            else
+            {
+                document.getElementById("temp").appendChild(flex4);
+                document.getElementById("f4").appendChild(box4);
+                document.getElementById("b4").appendChild(l2);
+            }
+
+            let flex5=document.createElement("div");
+            flex5.id="f5";
+            flex5.setAttribute("class","flexDiv");
+
+            let box5=document.createElement("div");
+            box5.id="b5";
+            box5.setAttribute("class","box1");
+
+            document.getElementById("temp").appendChild(flex5);
+            document.getElementById("f5").appendChild(box5);
+            document.getElementById("b5").appendChild(Finish);
+            document.getElementById("b5").appendChild(mat);
+            document.getElementById("b5").appendChild(color.img);
+            document.getElementById("b5").appendChild(color.label);
+
+            let input=document.createElement("textarea");
+            input.id="input";
+            input.setAttribute("class","textBox");
+            input.setAttribute("style","width:90%; height:250px;");
+
+            let inputInfo=document.createElement("label");
+            inputInfo.setAttribute("style","font-size:20px;");
+            inputInfo.innerHTML="<br>Write down any other features you would like<br>to add to the inside of your pool<br>Mosaics, designs ect.<br>"
+            //imgObj={box:box1,img:img1,label:l1};
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+
+            let submit1=document.createElement("button");
+            submit1.setAttribute("class","submit");
+            submit1.innerHTML="Dont Upload!";
+            submit1.addEventListener("click",()=>
+            {
+                div();
+                userData();
+            });
+            submit.addEventListener("click",()=>
+            {
+                console.log(inputInfo.value);
+                if(inputInfo.value!=undefined)
+                {
+                    if(inputInfo.value!=""){
+                    quote[9]=["Inside pool",inputInfo.value];
+                    let pic=document.createElement("button");
+                    pic.setAttribute("class","submit");
+                    pic.innerHTML="Upload pictures?";
+                    submit.replaceWith(submit1);
+                    document.getElementById("b5").appendChild(pic);
+                    let upload=document.createElement("input");
+                    upload.type="file";
+                    upload.setAttribute("class","file");
+                    upload.setAttribute("accept","image/*");
+                    upload.setAttribute("multiple","");
+                    upload.id="upload";
+                    
+                    pic.addEventListener("click",()=>
+                    {
+                        pic.remove();
+                        document.getElementById("b5").appendChild(upload);
+                    });
+                    let imgArr=new Array();
+                    upload.addEventListener("change",async()=>
+                    {
+                        let output = document.getElementById("upload");
+                        try
+                        {
+                            
+                            for(let i=0;i<output.files.length;i++)
+                            {
+
+                                let fr = new FileReader;
+                                let { resolve, reject, promise } = Promise.withResolvers();
+                                try
+                                {
+                                    fr.onload = (e) => resolve(e.target.result);
+                                    fr.readAsDataURL(output.files[i]);
+                                      
+                                    imgArr[i]=document.createElement("img");
+                                    imgArr[i].src=await promise;
+                                    quote[10][i]=[await promis];
+                                    imgArr[i].setAttribute("style","width:200px; height:200px;");
+                                    let ladel=document.createElement("label")
+                                    let r=i+1;
+                                    ladel.innerHTML="Image No."+r.toString()+"<br>";
+                                    let br=document.createElement("br")
+
+                                    document.getElementById("b5").appendChild(ladel);
+                                    document.getElementById("b5").appendChild(imgArr[i]);
+                                    document.getElementById("b5").appendChild(br);
+
+                                    console.log("Success line 781");
+                                }
+                                catch(err)
+                                {
+                                    console.log(err);
+                                }
+    
+                            }
+                            
+                            console.log(quote);
+                            submit.replaceWith(submit1);
+                            submit1.innerHTML="Submit";
+                            upload.remove();
+                            
+                        }
+                        catch(err)
+                        {
+                            console.log(err);
+                        }
+                    });}
+                }
+            });
+            document.getElementById("b5").appendChild(inputInfo);
+            document.getElementById("b5").appendChild(input);
+            document.getElementById("b5").appendChild(submit);
+            
+            console.log(quote);
+        }
         function concrete()
         {
             div();
@@ -549,7 +883,7 @@
             {
                 quote[8]=["Plaster Finish","Color:"];
                 div();
-                
+                let imgObj=new Object();
                 no1.innerHTML="What color would you like to paint the inside?";
 
                 let divFlex1=document.createElement("div");
@@ -567,50 +901,145 @@
                 let box1=document.createElement("div");
                 box1.setAttribute("class","box");
                 box1.id="b1";
+                box1.addEventListener("click",()=>
+                {
+                    imgObj={box:box1,img:img1,label:l1};
+                    quote[8][1]="Color:Aquamist";
+                    last(imgObj);
+                    console.log(quote);
+                });
 
                 let box2=document.createElement("div");
                 box2.setAttribute("class","box");
                 box2.id="b2";
+                box2.addEventListener("click",()=>
+                {
+                    imgObj={box:box2,img:img2,label:l2};
+                    quote[8][1]="Color:Atlantis";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box3=document.createElement("div");
                 box3.setAttribute("class","box");
                 box3.id="b3";
+                box3.addEventListener("click",()=>
+                {
+                    imgObj={box:box3,img:img3,label:l3};
+                    quote[8][1]="Color:Brook Green";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box4=document.createElement("div");
                 box4.setAttribute("class","box");
                 box4.id="b4";
+                box4.addEventListener("click",()=>
+                {
+                    imgObj={box:box4,img:img4,label:l4};
+                    quote[8][1]="Color:Emarald Green";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box5=document.createElement("div");
                 box5.setAttribute("class","box");
                 box5.id="b5";
+                box5.addEventListener("click",()=>
+                {
+                    imgObj={box:box5,img:img5,label:l5};
+                    quote[8][1]="Color:Lagoon";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box6=document.createElement("div");
                 box6.setAttribute("class","box");
                 box6.id="b6";
+                box6.addEventListener("click",()=>
+                {
+                    imgObj={box:box6,img:img6,label:l6};
+                    quote[8][1]="Color:New Riversand";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box7=document.createElement("div");
                 box7.setAttribute("class","box");
                 box7.id="b7";
+                box7.addEventListener("click",()=>
+                {
+                    imgObj={box:box7,img:img7,label:l7};
+                    quote[8][1]="Color:Opaline";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box8=document.createElement("div");
                 box8.setAttribute("class","box");
                 box8.id="b8";
+                box8.addEventListener("click",()=>
+                {
+                    imgObj={box:box8,img:img8,label:l8};
+                    quote[8][1]="Color:Pond Green";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box9=document.createElement("div");
                 box9.setAttribute("class","box");
                 box9.id="b9";
+                box9.addEventListener("click",()=>
+                {
+                    imgObj={box:box9,img:img9,label:l9};
+                    quote[8][1]="Color:Regancy White";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box10=document.createElement("div");
                 box10.setAttribute("class","box");
                 box10.id="b10";
+                box10.addEventListener("click",()=>
+                {
+                    imgObj={box:box10,img:img10,label:l10};
+                    quote[8][1]="Color:Turquoise";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box11=document.createElement("div");
                 box11.setAttribute("class","box");
                 box11.id="b11";
+                box1.addEventListener("click",()=>
+                {
+                    imgObj={box:box11,img:img11,label:l11};
+                    quote[8][1]="Color:White";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let box12=document.createElement("div");
                 box12.setAttribute("class","box");
                 box12.id="b12";
+                box12.addEventListener("click",()=>
+                {
+                    imgObj={box:box12,img:img12,label:l12};
+                    quote[8][1]="Color:Whitsunday";
+                    console.log(quote);
+                    last(imgObj);
+
+                });
 
                 let img1=document.createElement("img");
                 img1.setAttribute("class","colors");
@@ -702,6 +1131,7 @@
                 document.getElementById("df1").appendChild(box1);
                 document.getElementById("b1").appendChild(img1);
                 document.getElementById("b1").appendChild(l1);
+                
 
                 document.getElementById("df1").appendChild(box2);
                 document.getElementById("b2").appendChild(img2);
@@ -770,7 +1200,7 @@
             document.getElementById("temp").appendChild(agr);
             document.getElementById("temp").appendChild(tile);
 
-        }
+        }//div();concrete();
         function poolMaterial()
         {
             no1.innerHTML="What would you like the inner lining of you pool to be?";
@@ -1050,8 +1480,8 @@
             
 
         }
-        //div();
-        //poolMaterial();
+       // div();
+       // poolMaterial();
         function loadAdd()
         {
             div();
@@ -1090,6 +1520,9 @@
             });
 
         }
+        //outer upPic infoOnly
+        let upPic=false;
+        let infoOnly=false;
         function additional()
         {
             div();
@@ -1143,6 +1576,7 @@
                     imageBase64=await promise;
                     img.setAttribute("style","height:100px;width:100px;");
                     img.src=await promise;
+                    upPic=true;
                 }
                 catch(err)
                 {
@@ -1159,6 +1593,7 @@
                     console.log(quote);
                     div()
                     createInputs();
+                    infoOnly=true;
                 }
                 else if(input.value!="" && imageBase64!="")
                 {
@@ -1174,6 +1609,7 @@
 
 
         }
+        let outer=false;
         function paving()
         {
             div();
@@ -1209,6 +1645,7 @@
                 {
                     fr.onload = (e) => resolve(e.target.result);
                     fr.readAsDataURL(output.files[0]);
+                    outer=true;
                     quote[5] =["Outer Paving", await promise];
                     no1.innerHTML="Picture uploaded";
                     img.src=await promise;
@@ -1276,6 +1713,335 @@
                 }
             });
         }
+        async function gra()
+        {
+            div();
+            quote[3]="Paving Granite";
+            no1.innerHTML="You have selected Granite"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Granite your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function mar()
+        {
+            div();
+            quote[3]="Paving Marble";
+            no1.innerHTML="You have selected Marble"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Marble your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function sla()
+        {
+            div();
+            quote[3]="Paving Slate";
+            no1.innerHTML="You have selected Slate"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Slate your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function lim()
+        {
+            div();
+            quote[3]="Paving Limestone";
+            no1.innerHTML="You have selected Limestone"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Limestone your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function cor()
+        {
+            div();
+            quote[3]="Paving Coral";
+            no1.innerHTML="You have selected Coral"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Coral your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function qua()
+        {
+            div();
+            quote[3]="Paving Quartzite";
+            no1.innerHTML="You have selected Quartzite"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic of Quartzite your would like to use";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
+        async function oth()
+        {
+            div();
+            quote[3]="Paving Other";
+            no1.innerHTML="You have selected Other"
+            let heading=document.createElement("label");
+            heading.innerHTML="Upload a sample pic";
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit";
+            submit.setAttribute("onclick","paving()");
+            let img=document.createElement("img");
+            img.setAttribute("style","width:100px; height:100px;")
+            let upload=document.createElement("input");
+            upload.setAttribute("class","file");
+            upload.setAttribute("accept","image/*");
+            upload.id="upload";
+            upload.type="file";
+            document.getElementById("temp").appendChild(heading);
+            document.getElementById("temp").appendChild(br[30]);
+            document.getElementById("temp").appendChild(upload);
+            document.getElementById("temp").appendChild(br[31]);
+            
+            
+
+            upload.addEventListener("change",async()=>
+            {
+                let output = document.getElementById("upload");
+                let fr = new FileReader;
+                let { resolve, reject, promise } = Promise.withResolvers();
+                try
+                {
+                    fr.onload = (e) => resolve(e.target.result);
+                    fr.readAsDataURL(output.files[0]);
+                    quote[4] = await promise;
+                    no1.innerHTML="Picture uploaded";
+                    img.src=quote[4];
+                    document.getElementById("temp").appendChild(img);
+                    document.getElementById("temp").appendChild(submit);
+                }
+                catch(err)
+                {
+                    no1.innerHTML="Sorry could not load image";
+                    console.log(err);
+                }
+            });
+        }
         function selectM()
         {
             no1.innerHTML="Select your pool pavers";
@@ -1289,30 +2055,38 @@
             let pav2=document.createElement("button");
             pav2.setAttribute("class","opt");
             pav2.innerHTML="Granite";
+            pav2.setAttribute("onclick","gra()");
 
             let pav3=document.createElement("button");
             pav3.setAttribute("class","opt");
             pav3.innerHTML="Marble";
+            pav3.setAttribute("onclick","mar()");
 
             let pav4=document.createElement("button");
             pav4.setAttribute("class","opt");
             pav4.innerHTML="Slate";
+            pav4.setAttribute("onclick","sla()");
 
             let pav5=document.createElement("button");
             pav5.setAttribute("class","opt");
             pav5.innerHTML="Limestone";
+            pav5.setAttribute("onclick","lim()");
 
             let pav6=document.createElement("button");
             pav6.setAttribute("class","opt");
             pav6.innerHTML="Coral";
+            pav6.setAttribute("onclick","cor()");
 
             let pav7=document.createElement("button");
             pav7.setAttribute("class","opt");
             pav7.innerHTML="Quartzite";
+            pav7.setAttribute("onclick","qua()");
+
 
             let other=document.createElement("button");
             other.setAttribute("class","opt");
             other.innerHTML="Other";
+            other.setAttribute("onclick","oth()");
 
             document.getElementById("temp").appendChild(info);
             document.getElementById("temp").appendChild(pav1);
