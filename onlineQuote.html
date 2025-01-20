@@ -375,20 +375,24 @@
             let fn=false;
             let ln=false;
             let cell=false
-            if(data[0]!=undefined || data[0]!="")
+            if(data[0]!=undefined)
             {
+                if(data[0]!="")
                 em=true;
             }
-            if(data[1]!=undefined || data[1]!="")
+            if(data[1]!=undefined)
             {
+                data[1]!=""
                 fn=true;
             }
-            if(data[2]!=undefined || data[2]!=null || data[2]!="")
+            if(data[2]!=undefined)
             {
+                if(data[2]!="")
                 ln=true;
             }
-            if(data[3]!=undefined || data[3]!=null || data[3]!="")
+            if(data[3]!=undefined)
             {
+                if(data[3]!=null)
                 cell=true
             }
             if(cell==true && ln==true && em==true && fn==true)
@@ -775,6 +779,7 @@
             inputInfo.setAttribute("style","font-size:20px;");
             inputInfo.innerHTML="<br>Write down any other features you would like<br>to add to the inside of your pool<br>Mosaics, designs ect.<br>"
             //imgObj={box:box1,img:img1,label:l1};
+            
             let submit=document.createElement("button");
             submit.setAttribute("class","submit");
             submit.innerHTML="Submit";
@@ -789,11 +794,14 @@
             });
             submit.addEventListener("click",()=>
             {
-                console.log(inputInfo.value);
-                if(inputInfo.value!=undefined)
+                //console.log(inputInfo.value);
+                let data=document.getElementById("input").value
+                console.log(data);
+                console.log("Line 796");
+                if(data!=undefined)
                 {
-                    if(inputInfo.value!=""){
-                    quote[9]=["Inside pool",inputInfo.value];
+                    if(data!=""){
+                    quote[9]=["Inside pool details",data];
                     let pic=document.createElement("button");
                     pic.setAttribute("class","submit");
                     pic.innerHTML="Upload pictures?";
@@ -812,6 +820,7 @@
                         document.getElementById("b5").appendChild(upload);
                     });
                     let imgArr=new Array();
+                    let temp=new Array();
                     upload.addEventListener("change",async()=>
                     {
                         let output = document.getElementById("upload");
@@ -830,7 +839,7 @@
                                       
                                     imgArr[i]=document.createElement("img");
                                     imgArr[i].src=await promise;
-                                    quote[10][i]=[await promis];
+                                    temp[i]=await promise;
                                     imgArr[i].setAttribute("style","width:200px; height:200px;");
                                     let ladel=document.createElement("label")
                                     let r=i+1;
@@ -860,6 +869,7 @@
                         {
                             console.log(err);
                         }
+                        quote[10]=["Inside pool Design pics",temp];
                     });}
                 }
             });
@@ -2116,7 +2126,7 @@
            repairs.setAttribute("class","opt");
            let build=document.createElement("button");
            build.innerHTML="Build";
-           build.setAttribute("onclick","");
+           build.setAttribute("onclick","build()");
            build.setAttribute("class","opt");
 
            document.getElementById("temp").appendChild(clean);
@@ -2150,26 +2160,134 @@
         function leaks()
         {
             div();
+
+            let userInput=document.createElement("textarea");
+            userInput.rows=6;
+            userInput.cols=40;
+            userInput.id="input";
+            userInput.setAttribute("class","textBox");
+
             no1.innerHTML="What type of leak?"
             let pipes=document.createElement("button");
             pipes.setAttribute("class","opt");
             pipes.innerHTML="Pipe leaks";
-            pipes.setAttribute("onclick","pipes()");
+            pipes.addEventListener("click",()=>
+            {
+                div();
+                no1.innerHTML="Explain your pipe leak";
+                let label=document.createElement("label");
+                label.innerHTML="How is/are your pipe/pipes leaking?<br>"
+
+                let submit=document.createElement("button");
+                submit.setAttribute("class","submit");
+                submit.innerHTML="Submit";
+
+                document.getElementById("temp").appendChild(label);
+                document.getElementById("temp").appendChild(userInput);
+                document.getElementById("temp").appendChild(submit);
+                submit.addEventListener("click",()=>
+                {
+                    let data=document.getElementById("input").value;
+                    if(data!=undefined && data!="")
+                    {
+                        quote[0]=["Leaking pipes",data];
+                        div();
+                        userData();
+                    }
+                });
+
+            });
+           // pipes.setAttribute("onclick","pipes()");
 
             let pump=document.createElement("button");
             pump.setAttribute("class","opt");
             pump.innerHTML="Pump leaks";
-            pump.setAttribute("onclick","pump()");
+            pump.addEventListener("click",()=>
+            {
+                div();
+                no1.innerHTML="Explain your pump leak";
+                let label=document.createElement("label");
+                label.innerHTML="How is your pump leaking?<br>"
+
+                let submit=document.createElement("button");
+                submit.setAttribute("class","submit");
+                submit.innerHTML="Submit";
+
+                document.getElementById("temp").appendChild(label);
+                document.getElementById("temp").appendChild(userInput);
+                document.getElementById("temp").appendChild(submit);
+                submit.addEventListener("click",()=>
+                {
+                    let data=document.getElementById("input").value;
+                    if(data!=undefined && data!="")
+                    {
+                        quote[0]=["Leaking pump",data];
+                        div();
+                        userData();
+                    }
+                });
+
+            });
 
             let both=document.createElement("button");
             both.setAttribute("class","opt");
             both.innerHTML="Both pump and pipes";
-            both.setAttribute("onclick","both()");
+            both.addEventListener("click",()=>
+            {
+                div();
+                no1.innerHTML="Explain your leak";
+                let label=document.createElement("label");
+                label.innerHTML="What seems to be the problem?<br>"
+
+                let submit=document.createElement("button");
+                submit.setAttribute("class","submit");
+                submit.innerHTML="Submit";
+
+                document.getElementById("temp").appendChild(label);
+                document.getElementById("temp").appendChild(userInput);
+                document.getElementById("temp").appendChild(submit);
+                submit.addEventListener("click",()=>
+                {
+                    let data=document.getElementById("input").value;
+                    if(data!=undefined && data!="")
+                    {
+                        quote[0]=["leaks",data];
+                        div();
+                        userData();
+                    }
+                });
+
+            });
 
             let pool=document.createElement("button");
             pool.setAttribute("class","opt");
             pool.innerHTML="Pool leaks";
-            pool.setAttribute("onclick","poolleaks()");
+            pool.addEventListener("click",()=>
+            {
+                div();
+                no1.innerHTML="Explain your pool leak";
+                let label=document.createElement("label");
+                label.innerHTML="How is pool leaking?<br>"
+
+                let submit=document.createElement("button");
+                submit.setAttribute("class","submit");
+                submit.innerHTML="Submit";
+
+                document.getElementById("temp").appendChild(label);
+                document.getElementById("temp").appendChild(userInput);
+                document.getElementById("temp").appendChild(submit);
+                submit.addEventListener("click",()=>
+                {
+                    let data=document.getElementById("input").value;
+                    if(data!=undefined && data!="")
+                    {
+                        quote[0]=["Leaking pool",data];
+                        div();
+                        userData();
+                    }
+                });
+
+            });
 
             document.getElementById("temp").appendChild(pipes);
             document.getElementById("temp").appendChild(pump);
@@ -2202,21 +2320,99 @@
         }
         function wire()
         {
-            quote[0]="Wiring issue";
             div();
-            userData();
+            no1.innerHTML="Please explain the wiring issue"
+            quote[0]="Wiring issue";
+            let label=document.createElement("label");
+            label.innerHTML="Explain briefly what problem you have<br>"
+            let input=document.createElement("textarea");
+            input.id="input";
+            input.setAttribute("class","textBox");
+            input.setAttribute("style","width:60%;height:250px;");
+            let submit=document.createElement("button");
+            submit.innerHTML="Submit"
+            submit.setAttribute("class","submit");
+            document.getElementById("temp").appendChild(label)
+            document.getElementById("temp").appendChild(input)
+            document.getElementById("temp").appendChild(submit)
+
+            submit.addEventListener("click",()=>
+            {
+                let data=document.getElementById("input").value;
+                if(data!=undefined && data!="")
+                {
+                    div();
+                    quote[0]=["Wiring issue",data];
+                    userData();
+                }
+                else
+                {
+                    no1.innerHTML="We need to know what the problem is"
+                }
+            });
         }
         function light()
         {
-            quote[0]="Pool light needs fixing";
             div();
-            userData();
+            no1.innerHTML="What seems to the problem?"
+            let label=document.createElement("label");
+            label.innerHTML="Explain briefly what problem you have<br>"
+            let input=document.createElement("textarea");
+            input.id="input";
+            input.setAttribute("class","textBox");
+            input.setAttribute("style","width:60%;height:250px;");
+            let submit=document.createElement("button");
+            submit.innerHTML="Submit"
+            submit.setAttribute("class","submit");
+            document.getElementById("temp").appendChild(label)
+            document.getElementById("temp").appendChild(input)
+            document.getElementById("temp").appendChild(submit)
+
+            submit.addEventListener("click",()=>
+            {
+                let data=document.getElementById("input").value;
+                if(data!=undefined && data!="")
+                {
+                    div();
+                    quote[0]=["Pool Light",data];
+                    userData();
+                }
+                else
+                {
+                    no1.innerHTML="We need to know what the problem is"
+                }
+            });
         }
         function pumpE()
         {
-            quote[0]="Pump repairs";
             div();
-            userData();
+            no1.innerHTML="Your pump isnt working?"
+            let label=document.createElement("label");
+            label.innerHTML="Explain briefly what problem you have<br>"
+            let input=document.createElement("textarea");
+            input.id="input";
+            input.setAttribute("class","textBox");
+            input.setAttribute("style","width:60%;height:250px;");
+            let submit=document.createElement("button");
+            submit.innerHTML="Submit"
+            submit.setAttribute("class","submit");
+            document.getElementById("temp").appendChild(label)
+            document.getElementById("temp").appendChild(input)
+            document.getElementById("temp").appendChild(submit)
+
+            submit.addEventListener("click",()=>
+            {
+                let data=document.getElementById("input").value;
+                if(data!=undefined && data!="")
+                {
+                    quote[0]=["Pump problem",data];
+                    userData();
+                }
+                else
+                {
+                    no1.innerHTML="We need to know what the problem is"
+                }
+            });
         }
         function repairs()
         {
@@ -2240,12 +2436,47 @@
             let pool=document.createElement("button");
             pool.innerHTML="Pool repairs";
             pool.setAttribute("class","opt");
-            pool.setAttribute("onclick","");
+            pool.setAttribute("onclick","poolRep()");
 
             document.getElementById("temp").appendChild(leaks);
             document.getElementById("temp").appendChild(elec);
             document.getElementById("temp").appendChild(cos);
             document.getElementById("temp").appendChild(pool);
+        }
+        function poolRep()
+        {
+            div();
+            no1.innerHTML="Describe your pool problem";
+            let userInput=document.createElement("textarea");
+            userInput.rows=6;
+            userInput.cols=40;
+            userInput.id="input";
+            userInput.setAttribute("class","textBox");
+
+            let submit=document.createElement("button");
+            submit.setAttribute("class","submit");
+            submit.innerHTML="Submit"
+            submit.addEventListener("click",()=>
+            {
+                let data=document.getElementById("input").value;
+                if(data!="" && data!=undefined)
+                {   
+                    quote[0]=["Pool repairs",data];
+                    div();
+                    userData();
+                }
+                else
+                {
+                    no1.innerHTML="We need additional info"
+                }
+            });
+
+            let label=document.createElement("label");
+            label.innerHTML="Tell us whats wrong with your pool<br>"
+            document.getElementById("temp").appendChild(label);
+            document.getElementById("temp").appendChild(userInput);
+            document.getElementById("temp").appendChild(submit);
+
         }
         function collectInput()
         {
@@ -2270,13 +2501,29 @@
             userInput.rows=6;
             userInput.cols=40;
             userInput.id="input";
-            userInput.setAttribute("class","userInput");
+            userInput.setAttribute("class","textBox");
 
             let submit=document.createElement("button");
             submit.setAttribute("class","submit");
-            submit.setAttribute("onclick","collectInput()");
             submit.innerHTML="Submit"
+            submit.addEventListener("click",()=>
+            {
+                let data=document.getElementById("input").value;
+                if(data!="" && data!=undefined)
+                {   
+                    quote[0]=["Cosmetic",data];
+                    div();
+                    userData();
+                }
+                else
+                {
+                    no1.innerHTML="We need additional info"
+                }
+            });
 
+            let label=document.createElement("label");
+            label.innerHTML="Tell us what cosmetic issue you have<br>"
+            document.getElementById("temp").appendChild(label);
             document.getElementById("temp").appendChild(userInput);
             document.getElementById("temp").appendChild(submit);
             
