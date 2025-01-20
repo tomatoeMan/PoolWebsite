@@ -1,3 +1,14 @@
-Im busy with the onlineQuote.html. I still need to do the about and contact htmls and css
-Dont change any of the existing CSS files, you can make your own and upload it. 
-We can do like a developers who designed this on the website info.html
+10 days left 
+Close to finishing online quote html.
+
+Objectives for you
+-Gallary HTML
+-Design yourself a logo
+-Make a button on contact HTML to contact developers
+-Do CSS for both
+
+Then we put it on a server after I finish the backend. Look for advertising places
+-Facebook
+-Reddit
+
+www.demoPoolWebsite.com
