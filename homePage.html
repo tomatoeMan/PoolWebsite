@@ -23,9 +23,9 @@
                         </div>
                     </div>    
                     <label class="borderL">|</label>
-                    <label class="options">About</label>
+                    <label class="options" onclick="contact()">About</label>
                     <label class="borderL">|</label>
-                    <label class="options">Contact</label>
+                    <label class="options" onclick="contact()">Contact</label>
                 
                 <div class="info">
                     <label class="email">.....@gmail.com</label>
@@ -96,9 +96,13 @@
             
             <script>
                     console.log("script");
+                    function contact()
+                    {
+                        window.location.href="http://localhost:4010/contact";
+                    }
                     function onlineQuote()
                     {
-                        window.location.href="file:///C:/Users/Joshua/Desktop/dummy/onlineQuote.html"
+                        window.location.href="http://localhost:4010/quote"
                         //"https://clipart-library.com/clipart/790313.htm";
                         console.log("Loading next page");
                     }
