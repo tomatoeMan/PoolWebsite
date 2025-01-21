@@ -3,7 +3,7 @@ Creating backend server code with Node JS. Will upload a video of how to run it 
 
 Objectives for you
 
--Gallary HTML
+-Gallary HTML(Waiting on the update)
 
 -Design yourself a logo
 
