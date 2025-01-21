@@ -1,5 +1,5 @@
 9 days left 
-Close to finishing online quote html.
+Creating backend server code with Node JS. Will upload a video of how to run it on your cmd. Download the files from CodeSpaces or manually save them how you see them on github
 
 Objectives for you
 
