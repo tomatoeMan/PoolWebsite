@@ -22,9 +22,9 @@
                     </div>
                 </div>    
                 <label class="borderL">|</label>
-                <label class="options">About</label>
+                <label class="options" onclick="about()">About</label>
                 <label class="borderL">|</label>
-                <label class="options">Contact</label>
+                <label class="options"onclick="about()">Contact</label>
             
             <div class="info">
                 <label class="email">.....@gmail.com</label>
@@ -366,7 +366,11 @@
         }
         function homePage()
         {
-            window.location.href="file:///C:/Users/Joshua/Desktop/dummy/homePage.html"
+            window.location.href="http://localhost:4010/";
+        }
+        function about()
+        {
+            window.location.href="http://localhost:4010/contact";
         }
         async function sendData()
         {
@@ -419,6 +423,10 @@
                     building=false;
                     quote[11]=data;
                     quote=new Array();
+                }
+                else
+                {
+
                 }
             }
             else
