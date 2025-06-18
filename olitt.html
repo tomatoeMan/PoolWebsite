@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            How to Build your Website with OLITT
+        </title>
+    </head>
+    <body>
+        <style>
+            body
+            {
+                width:100%;
+                
+            }
+            .logo
+            {
+                display:block;
+                text-align: center;
+                
+                transition:0.2s;
+                padding:5px;
+            }
+            .logo:hover
+            {
+                padding:10px;
+                border:3px solid rgb(0, 0, 0);
+                border-radius: 8px;
+            }
+            h1
+            {
+                text-align: center;
+            }
+            .left
+            {
+                display: flex;
+                flex-direction: column;
+                float:left;
+                border-right:1px solid black;
+                overflow-y: scroll;
+                position:fixed;
+                width:31%;
+            }
+            .right
+            {
+                
+                
+                text-align: center;
+              
+                
+            }
+            .content
+            {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            .main
+            {
+                
+            }
+            .navClass
+            {
+                display:flex;
+                flex-direction: row;
+                overflow-x: hidden;
+                align-items: center;
+                width:100%;
+                text-align: center;
+                
+            }
+            .aLinks
+            {
+                display:block;
+                text-align: center;
+                border: 1px solid black;
+                padding:10px;
+                font-size: 20px;
+                border-radius: 8px;
+                transition: 0.2s;
+                width: 200px;
+                background-color: white;
+            }
+            .spaced
+            {
+                padding-right:30px;
+                padding-left:30px;
+            }
+            .aLinks:hover
+            {
+                background-color: rgba(255, 255, 255, 0.504);
+               
+            }
+            a
+            {
+                text-decoration: none;
+                text-decoration-line: none;
+                color:black;
+                
+            }
+            a:hover
+            {
+                text-decoration:underline;
+            }
+            .howTo
+            {
+                text-align: center;
+            }
+            .primaryNav
+            {
+                display:flex;
+                background-color: rgba(0, 0, 0, 0.604);
+            }
+            .bttn
+            {
+                background-color: white;
+                font-size: 30px;
+                border-radius: 100px;
+                padding:10px;
+                transition:0.2s
+            }
+            .bttn:hover
+            {
+                background-color: rgba(255, 255, 255, 0.776);
+            }
+        </style>
+        
+        
+        <div class="main">
+            <div id="left" class="left">
+                <h2 class="howTo">How to Links</h2>
+                
+                <a href="">Getting started with OLITT website builder</a>
+                <a href="">Setting up WordPress with OLITT</a>
+                <a href="">Choosing the right web hosting plan</a>
+                <a href="">Buying a domain</a>
+                
+            </div>
+            <div id="right" class="right">
+                <nav class="primaryNav">
+                    <button style="margin-left: 15px;" class="bttn" id="leftB">-</button>
+                    <div id="navDiv" class="navClass">
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                        <div class="spaced">
+                            <div class="aLinks">
+                                <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">Buy a Domain</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button style="margin-right: 15px;" class="bttn" id="rightB">-</button>
+                </nav>
+                <main class="content">
+                    <h1>
+                        How to Build your website with OLITT
+                    </h1>
+                    <a class="logo"href="https://affiliates.olitt.com/idevaffiliate.php?id=272">
+                        <img src="img/o2.jpg">
+                    </a>
+                <h2>In this tutorial im going to show you how to build your website with OLITT's drag and drop website builder</h2>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </main>
+            </div>
+                
+        </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            let left=document.getElementById("left");
+            let height=window.innerHeight;
+            height=height.toString();
+            left.setAttribute("style","height:"+height+"px;");
+
+            let right=document.getElementById("right");
+            let width=window.innerWidth;
+            let x=width*0.3;
+            x=x.toString();
+            right.setAttribute("style","margin-left:"+x+"px;");
+
+            let leftB=document.getElementById("leftB");
+            let rightB=document.getElementById("rightB");
+            
+            let xpos=0;
+
+            let navDiv=document.getElementById("navDiv");
+
+            leftB.addEventListener("click",()=>
+            {
+                xpos=xpos-25;
+                if(xpos<0)
+                {
+                    xpos=0;
+                }
+                navDiv.scrollLeft=xpos;
+            });
+
+            rightB.addEventListener("click",()=>
+            {
+                xpos=xpos+25;
+                let wid=navDiv.offsetWidth;
+                if(xpos>wid)
+                {
+                    xpos=wid;
+                }
+                navDiv.scrollLeft=xpos;
+            });
+        </script>
+    </body>
+</html>

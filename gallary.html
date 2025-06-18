@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallary</title>
+  
+</head>
+
+<link rel="stylesheet" href="css/gallary.css">
+<link rel="stylesheet" href="css/header.css">
+<link href="https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+  <body>
+    <div class="header">
+      <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
+          <label  class="quote"style="margin-left:0;margin-top:10px;" onclick="onlineQuote()">Get a quote</label>
+      </div>
+      <div class="gallDrop">
+        <label class="gallary" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" onclick="home()">Home Page</label>
+        
+      </div>
+      <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+  
+      
+          <div class="gallDrop">
+              <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" onclick="gal()" class="gallary">Gallary</label>
+          </div>
+              
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options" onclick="contact()">About</label>
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options" onclick="contact()">Contact</label>
+      
+      <div class="info">
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="email">.....@gmail.com</label>
+          <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="phone">089 1234 789</label>
+      </div>
+  </div>
+  <label style="margin-top:45px;position:fixed;z-index:999;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="welcome">WS-Pools</label><br>
+   <div id="picture">
+        <div id="flex1" class="flex">    
+            <div id="div1" class="div1">
+        
+            </div>
+            <div id="div1A" class="div1">
+        
+            </div>
+            <div id="div1B" class="div1">
+        
+            </div>
+        
+        </div>
+        <div id="div2" class="div2">
+            <label class="welG">The Gallary Page</label>
+        </div>
+    </div>
+    <div class="text" style="margin-top:600px;">
+        
+        <label class="t1">Serviced Pools</label><br>
+        <div class="flex2">
+            <div class="t2">
+                We take up most pride in delivering services
+                that you can count on. We aim to provide the
+                best services possible. Our standards ensure 
+                a clean pool all year round. Green pools, no 
+                longer need to be a nightmare. <br><br>
+                We keep the PH levels consistant ensuring 
+                your pool remains sparkling blue and safe to
+                swim in.<br><br>Get a quote, select your type of quote and experience your 
+                pool like never before
+            </div>
+            <div>
+                <img id="pic1" class="pic1" src="img/service/img1.jpg"></img>
+            </div>
+        </div><br><br>
+        <label class="t1">Built Pools</label><br>
+        <div class="flex2">
+            <div class="t2">
+                We have build pools all across South Africa, worked in
+                over 6 different provinces and built a variety of pools.<br><br>
+
+                If your looking for a classical pool design that wont hurt your wallet or
+                something a little more exciting take a look at our quote options to see what your looking for.
+
+                <br><br>
+                You can choose from a pre-built fiber glass mold to a concrete plaster finish build with an aggregate finish.
+                The choice is yours and the sky is the limit. Expect nothing but the best.
+            </div>
+            <div>
+                <img id="pic2" class="pic1" src="img/Finishes/fo1.jpg"></img>
+            </div>
+
+    </div>
+      <script>
+         function onlineQuote()
+        {
+            window.location.href="https://demo-ws-pools.co.za/quote"
+            //"https://clipart-library.com/clipart/790313.htm";
+            console.log("Loading next page");
+        }
+        function home()
+        {
+            window.location.href="https://demo-ws-pools.co.za/";
+        }
+        function contact()
+        {
+            window.location.href="https://demo-ws-pools.co.za/contact";
+        }
+        function gal()
+        {
+            window.location.href="https://demo-ws-pools.co.za/gal";
+        }
+        let pic1=document.getElementById("pic1");
+        let pic2=document.getElementById("pic2");
+        let xA;
+        let xB;
+        let op=1;
+        let img=1;
+        let img1=1;
+        function fade()
+        {
+            op=op-0.01;
+            pic1.setAttribute("style","opacity:"+op.toString()+";");
+            pic2.setAttribute("style","opacity:"+op.toString()+";");
+            if(op<=0)
+            {
+                clearInterval(xA);
+                img++;
+                img1++;
+                if(img==6)
+                {
+                    img=1;
+                }
+                pic1.src="img/service/img"+img.toString()+".jpg";
+                if(img1==4)
+                {
+                    img1=1;
+                }
+                pic2.src="img/Finishes/fo"+img1.toString()+".jpg";
+                function fadeIn()
+                {
+                    op=op+0.01;
+                    
+                    pic1.setAttribute("style","opacity:"+op.toString()+";");
+                    pic2.setAttribute("style","opacity:"+op.toString()+";");
+                    if(op>=1)
+                    {
+                        clearInterval(xB);
+                        stt();
+                    }
+                }
+                xB=setInterval(fadeIn,5);
+            }
+        } 
+        function stt()
+        {
+            setTimeout(interval,2500);
+            function interval()
+            {
+                xA=setInterval(fade,10);
+            }   
+        }setTimeout(stt,2500);
+        
+        let div1=document.getElementById("div1");
+            let div1A=document.getElementById("div1A");
+            let div1B=document.getElementById("div1B");
+            
+            let flex=document.getElementById("flex1");
+            
+            let div2=document.getElementById("div2");
+            let h=window.innerHeight-div2.offsetHeight;
+            
+            h=h/2;
+
+            let fH=window.innerHeight-flex.offsetHeight;
+            fH=fH/2;
+
+            div2.setAttribute("style","position:absolute;z-index:2;margin-top:"+h.toString()+"px;");
+            flex.setAttribute("style","margin-top:"+fH.toString()+"px;");
+            let imgArr=new Array();
+            for(let i=1;i<6;i++)
+            {
+                imgArr[i]=document.createElement("img");
+                imgArr[i].src="img/"+i.toString()+".jpg";
+            }
+            let x;
+            let x1;
+            let c=2;
+            let c1=3;
+            let c2=4;
+            let f=1;
+            let f1=1;
+            let f2=1;
+            let f3=1;
+            div1.setAttribute("style","border-radius: 30px;magrin-top:0;background-image:url('"+imgArr[1].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+            div1A.setAttribute("style","border-radius: 30px;magrin-top:0;background-image:url('"+imgArr[2].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+            div1B.setAttribute("style","border-radius: 30px;magrin-top:0;background-image:url('"+imgArr[3].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+            
+            function setBackground()
+            {
+                f=f-0.001;                
+                
+                div1.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                div1A.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c1].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                div1B.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c2].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                if(f<=0)
+                {
+                    clearInterval(x);
+                    c++;
+                    c1++;
+                    c2++;
+                    function fadeIn()
+                    {
+                        f=f+0.001;
+                        div1.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                        div1A.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c1].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                        div1B.setAttribute("style","border-radius: 30px;opacity:"+f.toString()+";magrin-top:0;background-image:url('"+imgArr[c2].src+"'); width:25%;height:80%;background-repeat: no-repeat;background-size:100% 500px;");
+                        if(f>=1)
+                        {
+                            clearInterval(x1);
+                            start();
+                        }
+                    }
+                    x1=setInterval(fadeIn,5);
+                }
+                if(c2==5)
+                {
+                    c=1;
+                    c1=2;
+                    c2=3;
+                }
+                
+            }
+            function start()
+            {
+                x=setInterval(setBackground,5);
+            }
+            start();
+            
+
+      </script>
+    </div>
+      
+  </body>
+</html>

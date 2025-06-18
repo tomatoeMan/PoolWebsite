@@ -3,238 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Your Pool Company Name] - Demo</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>About</title>
+
+</head>
   <style>
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+    .submit
+{
+    font-size:22px;
+    display:block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgba(0, 0, 0, 0.749);
+    background-color:rgba(51, 0, 253, 0.446);
+    border:3px solid rgb(51, 0, 253);
+    padding:10px;
+    border-radius: 30px;
+    
+    transition:0.2s;
+    width:20%;
+    
 }
-
-body {
-  background-image: url("img/bg1.jpg");
-  margin:0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  font-size: 1rem;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Header Styles */
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: rgb(41, 127, 185);
-  color: white;
-  
-  margin-top:0px;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-/* Navigation Buttons */
-.nav-button {
-  background-color: #3498db;
-  color: white;
-  padding: 15px 25px;
-  margin: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: #2980b9;
-}
-
-/* Section Styles */
-section {
-  display: none;
-  padding: 40px;
-  margin: 40px auto;
-  width: 85%;
-  max-width: 900px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-section.active {
-  display: block;
-  
-}
-
-/* About Section */
-#about h2 {
-  font-size: 2.5rem;
-  color: rgb(41, 128, 185);
-}
-
-#about h3 {
-  font-size: 1.8rem;
-  margin-top: 20px;
-}
-
-#about ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#about ul li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-/* Form Section */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-label {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-input, textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border: 2px solid #ddd;
-  border-radius: 6px;
-  width: 100%;
-  transition: all 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-  border-color: rgba(51, 152, 219, 0.407);
-  outline: none;
-}
-
-input[type="submit"] {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 15px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-  background-color: #2980b9;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-/* Footer Styles */
-footer {
-  background-color: rgb(44, 62, 80);
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 1rem;
-  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-  margin: 0;
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-footer a {
-  color: #ffffff82;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffffff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  section {
-    width: 95%;
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  input, textarea {
-    font-size: 0.9rem;
-  }
-
-  .nav-button {
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
+    .submit:hover
+{
+    background-color:rgb(51, 0, 253);
+    font-weight: bold;
+    font-size:23px;
+    border-radius: 20px;
+    color:black;
 }
   </style>
-  <link rel="stylesheet" href="css/header.css">
-</head>
-<body>
-  
+<body id="body">
+  <div id="comp">
   <link href="https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/about.css">
   <div class="header">
-      <div class="gallDrop">
-          <label class="gallary" onclick="homePage()">Home Page</label>
-          
-      </div>
-          <div class="gallDrop">
-              <label class="gallary">Gallary</label>
-              <div class="linkOpts">
-                  <label class="l1">Serviced Pools</label>
-                  <label class="l1">Re-furbished Pools</label>
-                  <label class="l1">Built Pools</label>
-              </div>
-          </div>    
-          <label class="borderL">|</label>
-          <label class="options">About</label>
-          <label class="borderL">|</label>
-          <label class="options" onclick="contact()">Contact</label>
+    <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
+        <label  class="quote"style="margin-left:0;margin-top:10px;" onclick="onlineQuote()">Get a quote</label>
+    </div>
+    <div class="gallDrop">
+      <label class="gallary" style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" onclick="home()">Home Page</label>
       
-      <div class="info">
-          <label class="email">.....@gmail.com</label>
-          <label class="phone">089 1234 789</label>
-      </div>
-  </div>
-  <label class="welcome" style="position:fixed;z-index:999;margin-top:60px;">WS-Pools</label>
+    </div>
+    <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+
+        <div class="gallDrop">
+            <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" onclick="gal()" class="gallary">Gallary</label>
+        </div>    
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options" onclick="contact()">About</label>
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options" onclick="contact()">Contact</label>
+    
+    <div class="info">
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="email">.....@gmail.com</label>
+        <label style="color:white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="phone">089 1234 789</label>
+    </div>
+</div>
+<label style="margin-top:45px;position:fixed;z-index:999;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="welcome">WS-Pools</label><br>
 
   <div class="menu" style="background-color: rgba(0, 0, 0, 0.564);">
   <header >
@@ -266,40 +93,143 @@ footer a:hover {
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" >
-    <h2>Contact Us</h2>
-    <p>Get in touch with us for any pool installation inquiries or quotes!</p>
-    <form action="#" method="POST">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
+  
+    <br>
+    <section id="contact" style="width:80%; background-color:white; margin:auto;text-align:center;">
+      <h2>Contact Us</h2>
+    	<p>Get in touch with us for any pool installation inquiries or quotes!</p><br><br>
+      <label for="name">Enter your details below</label><br>
+      <input style="width:500px;height:50px" type="text" id="name" name="name" placeholder="Your full name" required><br><br>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required>
+      
+      <input style="width:500px;height:50px" type="email" id="email" name="email" placeholder="Your email" required><br><br>
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+      
+      <input style="width:500px;height:50px" type="tel" id="phone" name="phone" placeholder="Your phone number"><br><br><br>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+      <label for="message">Your Message:</label><br>
+      <textarea style="width:80%;" id="message" name="message" rows="4" placeholder="Write your message here" required></textarea><br><br>
+    	<button class="submit" onclick="send()">Send</button><br><br>
+    </section>
+      
+    
+  <br>
 
   <footer>
     <p>&copy; 2025 WS POOLS. All rights reserved.</p>
   </footer>
-
+  </div>
   <script>
     //You can write the code that connects the menu to the rest of the pages
     // Function to toggle the visibility of the sections
-    function homePage()
+    let once=false;
+    async function send()
     {
-        window.location.href="http://localhost:4010/";
+      
+      const url="https://demo-ws-pools.co.za/message";
+      let name=document.getElementById("name").value;
+      let email=document.getElementById("email").value;
+      let phone=document.getElementById("phone").value;
+      let message=document.getElementById("message").value;
+      let pass=[false,false,false,false];
+      let c=0;
+      if(name!=undefined && name!="")
+      {
+        pass[0]=true;
+      }
+      if(email!=undefined && email!="")
+      {
+        pass[1]=true;
+      }
+      if(phone!=undefined && phone!="")
+      {
+        pass[2]=true;
+      }
+      if(message!=undefined && message!="")
+      {
+          pass[3]=true;
+      }
+      let enter=true;
+      for(let i=0;i<pass.length;i++)
+      {
+        if(pass[i]==false)
+        {
+          enter=false;
+        }
+      }
+      if(enter==true && once==false)
+      {
+        once=true;
+        const res=await fetch(url,
+        {
+          method:"POST",
+          headers:
+          {
+            "Content-Type":"application/json"
+          },
+          body:JSON.stringify(
+          {
+            Email:email,
+            Phone:phone,
+            Name:name,
+            Message:message
+          })
+        });
+                
+        const fromD=await res.json();
+        console.log(fromD+"line 180");		
+        if(fromD==true)
+        {
+          window.alert("Your Message has been sent");
+          once=false;
+        }
+      }
+      else if(enter==false)
+      {
+        window.alert("Please complete the contact form");
+      }
+      else if(once==true)
+      {
+        window.alert("Please wait your message is being sent");
+
+      }
+  }
+    let wind=window.innerWidth;
+                console.log(wind);
+                if(wind<980)
+                {
+                    let temp=document.getElementById("comp");
+                    temp.remove();
+                    let label=document.createElement("label");
+                    label.innerHTML="Sorry mobile devices are currently not supported.<br><br>Under developement<br><br>Please Open this page from your laptop or PC to continue";
+                    label.setAttribute("class","label");
+
+                    let div1=document.createElement("div");
+                    div1.id="div1";
+
+                    div1.setAttribute("class","div1");
+
+                    document.getElementById("body").appendChild(div1);
+                    document.getElementById("div1").appendChild(label);
+
+                }else{
+    function onlineQuote()
+    {
+        window.location.href="https://demo-ws-pools.co.za/quote"
+                        //"https://clipart-library.com/clipart/790313.htm";
+        console.log("Loading next page");
+    }
+    function gal()
+    {
+        window.location.href="https://demo-ws-pools.co.za/gal";
+    }
+    function home()
+    {
+        window.location.href="https://demo-ws-pools.co.za/";
     }
     function quote()
     {
-      window.location.href="http://localhost:4010/contact";
+      window.location.href="https://demo-ws-pools.co.za/contact";
     }
     function toggleSection(sectionId) {
       // Hide both sections
@@ -313,7 +243,7 @@ footer a:hover {
     // Initially show the About section
     window.onload = function() {
       toggleSection('about');
-    };
+    };}
   </script>
 </body>
 </html>

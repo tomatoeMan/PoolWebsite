@@ -1,133 +1,1265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="css/Css.css">
+  
+        <title>WS Pools Cleaning and Building Pools</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Best pool company in South Africa for all your pool needs. No more green pools all  year round. Sparkling blue and clear pools for you and your family to swim in">
+        <meta name="keywords" content="Build my pool, Clean my pool, how to clean my pool, ws pools, WS Pools, WS pools, green pools, build a pool, quote for pool, pool services, pool, pools, pool guys, clean my pool, how to clean a green pool, pool company, pool companies">
+        <meta name="author" content="Joshua Kellerman">
+        <meta name="robots" content="index, follow">    
         
-        <title>WS-Pools</title></head>
-    <body>
-        <link href="https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-            <div class="header">
-                <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
-                    <label class="quote"style="margin-top:10px;">Get a quote</label>
-                    <div class="linkOpts">
-                        <label class="l1" onclick="onlineQuote()">Online Quote</label>
-                        <label class="l1">Book a Quote</label>
-                    </div>
-                </div>
-                    <div class="gallDrop">
-                        <label class="gallary">Gallary</label>
-                        <div class="linkOpts">
-                            <label class="l1">Serviced Pools</label>
-                            <label class="l1">Re-furbished Pools</label>
-                            <label class="l1">Built Pools</label>
-                        </div>
-                    </div>    
-                    <label class="borderL">|</label>
-                    <label class="options" onclick="contact()">About</label>
-                    <label class="borderL">|</label>
-                    <label class="options" onclick="contact()">Contact</label>
-                
-                <div class="info">
-                    <label class="email">.....@gmail.com</label>
-                    <label class="phone">089 1234 789</label>
-                </div>
-            </div>
-            
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+		<meta property="og:image" content="img/thumb.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1024">
+		<meta property="og:image:height" content="1024">
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+  	                "@type": "LocalBusiness",
+  	                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Pretoria",
+                    "addressRegion": "GT",
+                    "postalCode":"1057",
+                    "streetAddress": "20 DF Malan Avenue"
+  	            },
+  	            "description": "Specializing in building and cleaning pools as well as repairs and electrical work for pumps and filters",
+  	            "name": "WS Pools",
+  	            "telephone": "555-111-2345",
+  	            "openingHours": "Mo,Tu,We,Th,Fr 09:00-17:00",
+  	            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "-25.8383292",
+                "longitude": "28.213037"
+ 		    }, 			
+  	        "sameAs" : [ "https://demo-ws-pools.co.za"]
+	    }
         
-            <div class="menu">
-                
-            </div><br><br><br>
-          
-            
-            
-            <label class="welcome" style="position:fixed;z-index:999;">WS-Pools</label><br>
+        </script>
 
-            
-            <img id="imgW1" style="height:100px; width:100%;position:relative;z-index:1;"></img>
-                <label style="text-align:center;display:block;position:relative; z-index:1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:80px;color:rgba(51, 0, 255, 0.729);">SWIMMING</label><br style="font-size:20px;">
-                <label style="top:1px;text-align:center;display:block;position:relative; z-index:1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:20px;color:rgba(51, 0, 255, 0.729);">Is an art and so are your pools</label><br>
-                <img id="imgW" style="height:100px; width:100%;position:relative;z-index:1;"></img><br><br>
-            <div class="picDiv">
-                    <img  src="img/2.jpg" class="img1"></img>
-                    <img  src="img/1.jpg" class="img1"></img>
-                    <img  src="img/3.jpg" class="img1"></img>
-                </div>
-            </div><br><br><br><br>
-            <div class="serviced">
-                
-                <div class="servs">
-                    <label style="margin-top:50%;">Active clients</label><br>
-                    <img style="width:65%; height:65%" src="img/leaf.png" ><img><br>
-                    <label id="servs"></label>
-                </div>
-                <div class="built">
-                    <label style="margin-top: 5%;">Number Built</label><br>
-                    <img style="width:65%; height:65%" src="img/built.png" ><img><br>
-                    <label id="built"></label>
-                </div>
-                <div class="cities">
-                    <label style="margin-top: 5%;">Cities Done</label><br>
-                    <img style="width:65%; height:65%" src="img/house.png" ><img><br>
-                    <label id="cities"></label>
-                </div>
-                <div class="provs">
-                    <label style="margin-top: 5%;">Provinces Done</label><br>
-                    <img style="width:65%; height:65%" src="img/town.png" ><img><br>
-                    <label id="provs"></label>
-                </div>
-                
-            </div>
-            <div></div>
-            
-                <img src="img/bg1.jpg" style="width:100%;position:absolute; z-index:1;"></img>
-                <img src="img/bg2.jpg" style="width:100%;position:absolute; z-index:1;margin-top:800px;"></img>
-                <img src="img/bg3.jpg" style="width:100%;position:absolute; z-index:1;margin-top:1600px;"></img>
-                <div class="divs">  
-                    <div style="margin-top:750px; background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
-                        <label style="text-align: center;">Tailor made</label>
+    </head>
+  
+    <body id="body">
+        <link rel="stylesheet" href="css/Css.css">
+      	<style>
+            @media screen and (min-width:100px) and (max-width: 600px) 
+          {
+              body
+                {
+                    width:100%;
+                    
+                }
+                .section1
+                {
+                        display:none;	
+                }
+                .imgMob1
+                {
+                        display:none;
+                }
+                .swimming
+                {
+                    text-align:center;
+                    display:block;
+                    position:relative; 
+                    z-index:1;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+                    font-size:40px;
+                    color:rgb(51, 0, 255);
+                        background:linear-gradient(45deg, rgb(51, 0, 255)0% 30%,rgb(5, 0, 28));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                color: transparent;
+                }
+          
+                    .box2
+                {
+                    margin:auto; 
+                        width:95%;
+                        display:flex; 
+                        flex-direction: column;
+                        justify-content: space-around;
+                        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    border-radius: 20px;
+                    padding:10px;
+                }
+                .box3
+                {
+                    color:white;
+                    border:4px solid rgb(254, 253, 253);
+                    border-radius:20px;
+                    transition: 0.2s;
+                    padding: 20px;
+                    width:80%;
+                    font-size:15px;
+                }
+          }
+        </style>
+
+        <nav>
+            <div id="temp">
+                <div class="header">
+                    <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
+                        <a href="https://demo-ws-pools.co.za/quote"  class="quote" style="margin-top:10px; text-decoration: none;">Get a quote</a>
                     </div>
-                    <div style="margin-top:650px; background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
+                    
+                    <div class="gallDrop">
+                        <a href="https://demo-ws-pools.co.za/gal" style="text-decoration: none;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="gallary">Gallary</a>
+                    </div>    
+                    
+                    <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+                    <a href="https://demo-ws-pools.co.za/contact" style="text-decoration: none;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options">About</a>
+                    <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="borderL">|</label>
+                    <a href="https://demo-ws-pools.co.za/contact" style="text-decoration: none;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="options">Contact</a>
+                
+                    <div class="info">
+                        <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="email">.....@gmail.com</label>
+                        <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="phone">089 1234 789</label>
+                    </div>
+                </div>
+            
+                <label style="color:rgba(255, 255, 255, 0.774);margin-top:45px;position:fixed;z-index:999;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="welcome">WS-Pools</label><br>
+                
+                <div class="menu">
+                </div> 
+              	
+        </nav>
+        <header><br><br><br>
+            <section class="section1">
+                <h1 style="color:rgba(0, 0, 0, 0.729);">WS pools How we service and build pools</h1><br>
+        
+                <p>
+                    With us your pools will be blue and safe for you and your family to swim in all year round.<br><br>
+                    We have built pools all over South Africa. Ranging from masonary pools, fiber glass in ground and out ground pools,
+                    to vinly pools.<br><br>
+                    Here at WS pools the only limit is your imagination<br>
+                    We specialize in custom pool designs with amazing finisishes.<br><br>
+                    When making use of our online quote option. You could choose the desired design and finish for your pool.<br>
+                    Upload pictures of the design your are looking for and it will be emailed to us<br>
+                    So if you if your opting for a classy masonry finsihed pool, fiber glass pool or vinly finshed pool rest assured that quality is guarenteed<br><br>
+                    When choosing WS pools your pool will be in good hands<br><br>
+                    
+                    Get intouch by clicking 'Get a Quote' or Click on the Contact page.<br><br>
+                    You can send us a mesage and tell us what you are looking for<br><br>
+                    What are you waiting for get intouch and experience quality you have never experienced before<br>
+                </p>
+
+                <a class="aClass" class="link" href="https://demo-ws-pools.co.za/quote">Book a Quote</a>
+            </section>
+        </header>
+        <main class="box1"><br><br><br>
+            
+            <img class="imgMob1" id="imgW1" alt="Canvas element simulating waves" style="height:100px; width:100%;position:relative;z-index:1;">
+            <label class="swimming">SWIMMING</label><br style="font-size:20px;">
+            <h3 style="top:1px;text-align:center;display:block;position:relative; z-index:1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:15px;color:rgba(22, 0, 121, 0.544);">Is an art and so are your pools</h3><br>
+            <img class="imgMob1" id="imgW" alt="Canvas element simulating waves" style="height:100px; width:100%;position:relative;z-index:1;">
+  
+            <section>  
+            <h2 style="text-align: center;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:white;">WS Pools How We Can Help You</h2><br>
+                <div class="box2" style="margin:auto; width:95%;display:flex; justify-content: space-around;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    <div class="box3" onclick="onlineQuote()">
+                      <div class="box4">
+                        <h3 style="text-align: center;">How we keep your pool clean</h3>
+                        <ul>
+                            <li>
+                                <p>We check the PH of your pool before cleaning it</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>We correct the PH level</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>We start removing any leaves or foreign obejcts</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>We vacuume the pool floor and clean the walls</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>We then proceed to start cycling the pool filter</p>
+                            </li>
+                        </ul>
+                    </div>
+                      
+                      	<img class="imgDiv" src="img/service/img1.jpg" alt="Picture of a pool being maintained">
+                      
+                    </div><br><br>
+                    <div class="box3" onclick="onlineQuote()">
+                        <div class="box4">
+                            <h3 style="text-align: center;">How we keep your pool running</h3>
+                            <ul>
+                                <li>
+                                    <p>We fix leaks</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We repair linings</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We repair pumps</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We take care of your electrical work</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We clean your filters</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="imgDiv" src="img/service/img2.jpg" alt="Picture of a pool being maintained">
+                    </div><br><br>
+                
+                    <div class="box3" onclick="onlineQuote()">
+                        <div class="box4">
+                            <h3 style="text-align: center;">How we build your pool</h3>
+                            <ul>
+                                <li>
+                                    <p>We ask for design info</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We take measurements</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We strategize a plan</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>We implement that plan</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>Your pool looks amazing</p>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <img class="imgDiv" src="img/service/img3.jpg" alt="Picture of a pool being maintained">
+                    </div>
+                    
+
+            </div>
+            </section>
+            <section>
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-align: center;color:white;">With all of this done on a monthly basis your guarenteed a clean and healthy pool for you and you family to swim in</p>
+                <a href="https://demo-ws-pools.co.za/quote" style="display:block;margin:auto;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;text-align: center;color:white;">Book a quote</a>
+                <br>
+                <br><br>
+                <div id="stick" class="serviced">
+                
+                    <div class="servs">
+                        <label style="margin-top:50%;">Active clients</label><br>
+                        <img alt="Data showing how many clients are with WS Pools" style="width:65%; height:65%" src="img/leaf.png" ><img><br>
+                        <label id="servs"></label>
+                    </div>
+                    <div class="built">
+                        <label style="margin-top: 5%;">Number Built</label><br>
+                        <img alt="Data showing how pools WS Pools Built" style="width:65%; height:65%" src="img/built.png" ><img><br>
+                        <label id="built"></label>
+                    </div>
+                    <div class="cities">
+                        <label style="margin-top: 5%;">Cities Done</label><br>
+                        <img alt="Data showing how many cities WS pools working in" style="width:65%; height:65%" src="img/house.png" ><img><br>
+                        <label id="cities"></label>
+                    </div>
+                    <div class="provs">
+                        <label style="margin-top: 5%;">Provinces Done</label><br>
+                        <img alt="Data showing how many provinces WS pools have worked in" style="width:65%; height:65%" src="img/town.png" ><img><br>
+                        <label id="provs"></label>
+                    </div>
+                
+                </div>
+            
+            
+                <div class="divs">
+                    <img alt="A pool WS Pools Serviced and Built" src="img/bg1.jpg"  style="display:block;margin-bottom:0;width:100%;">
+                  	
+                    
+                  <div style="background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
+                        	<label style="text-align: center;">Tailor made</label>
+                  </div>
+                  
+                    <img alt="A pool WS Pools Serviced and Built" src="img/bg2.jpg" style="display:block;margin-bottom:0;width:100%;">
+                  	
+                    <div style="background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;display:flex;align-items: center;justify-content: center;">
                         <label style="text-align: center;">To perfection</label>
                     </div>
+                      <img alt="A pool WS Pools Serviced and Built" src="img/bg3.jpg" style="display:block;width:100%;">
+                      </div>
+                
+            <section style="background-color:rgba(51, 0, 255, 0.163)">
+                <div style="background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;">
+                    <h2 class="h2A">Customer Reviews</h2>
+                    <p class="p2A">Pools that WS Pools have built and serviced across South Africa</p>
+                </div><br><br>
+                <div id="reviews">
+                    <div style="display:flex;align-items:center;text-align: center;">
+                            <button id="net1" class="btn" style="margin-left:20px" >&lt;</button>
+                            <div class="mainD" style="align-items: center;width:100%;" id="Main">
+                                <div class="loading" id="Loading"></div>  
+                                <div id="md1"></div>
+                            </div>
+                            <button id="net2" class="btn" style="margin-right:20px" >&gt;</button>
+                    </div>
                 </div>
                 
+                </div>
+                
+              <div id="main" class="mainDiv">
+                    <button style="margin-bottom:40px" class="sub1" id="review">Leave a Review</button>
+                </div>
+                <div id="otpDiv" class="offTemp">
+                    <div class="inline1">
+                        <label id="l1"></label><br>
+                        <input id="opt" style="width:400px;height:50px;border-radius: 10px;text-align:center;font-size: 25px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" type="text" id="name"></input><br>
+                    </div>
+                    <button class="submit" id="s1">Submit</button>
+                    <button class="submit" id="c1">Back</button>
+                </div>
+                    <div id="content" class="dis">
+                        <div id="one" class="one">
+                            <img class="profile" id="pic">
+                            <input id="profile" src="" type="file" id="profile pic"></input>
+                            <label for="profile">Upload a picture</label><br>
+                            <button class="submit" onclick="next1()">Next</button>
+                            
+                        </div>
+                        <div id="two" class="two">
+                            <label>Input your name below</label>
+                            <input id="name" style="width:400px;height:50px;border-radius: 10px;text-align:center;font-size: 25px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" type="text" id="name"></input>
+                            <label>Enter your email address</label>
+                            <input id="email" style="width:400px;height:50px;border-radius: 10px;text-align:center;font-size: 25px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" type="text" id="name"></input><br>
+                            <div style="display:block;">
+                                <button class="submit" onclick="next2()">Next</button>
+                                <button class="submit" onclick="back2()">Back</button>
+                            </div>
+                        </div>
+                        <div id="three" class="three">
+                            <label>Write your review</label>
+                            <textarea id="text" class="textArea"></textarea><br>
+                            <div style="display:block;">
+                                <button class="submit"  onclick="next3()">Next</button>
+                                <button class="submit" onclick="back3()">Back</button>
+                            </div>
+
+                        </div>
+                        <div id="four" class="four">
+                            <label>Select your rating</label>
+                            <div style="display:flex; justify-content: space-around;">
+                                <label id="sd" class="vsad" onclick="ch1()">😠</label>
+                                <label id="sad" class="sad" onclick="ch2()">😄</label>
+                                <label id="nut" class="nut"onclick="ch3()">😐</label>
+                                <label id="happy" class="happy" onclick="ch4()">😄</label>
+                                <label id="ehappy" class="ehappy" onclick="ch5()">🤯</label>
+                            </div><br>
+                            <div style="display:block;">
+                                <button class="submit" id="submit" onclick="submit()">Submit</button>
+                                <button class="submit" onclick="back4()">Back</button>
+                            </div>
+                            
+                        </div>
+            </section>
+            
+            <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+            </script>
+            <section style="background-color:rgba(51, 0, 255, 0.163)">
+                <div style="background-color:rgb(51, 0, 255);border-top: 15px solid rgba(0, 217, 255, 0.547);border-bottom: 15px solid rgba(0, 217, 255, 0.547); height:100px;">
+                    <h2 class="h2A">Customer Reviews Stats</h2>
+                    <p class="p2A">A collection of all customer reviews and gerneral statistics</p>
+                </div><br><br><br>
+                <div style="display:flex; justify-content: space-around;align-items: center;">
+                    <div style="width:50%;">
+                    <canvas class="pie" id="myChart" style="width:100%;max-width:600px"></canvas>
+                    </div>
+                    <div style="font-size:30px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">    
+                        <label id="x1"></label><br>
+                        <label id="x2"></label><br>
+                        <label id="x3"></label><br>
+                        <label id="x4"></label><br>
+                        <label id="x5"></label>
+                    </div>
+                </div>
+                
+            </section>
+            </div>
+            </section>
+            </main>
+            <footer id="footer" class="footer" style="border-bottom:none">
+                        <div style="margin-left: 30px; font-size:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                            <p>Thank you for visiting WS Pools Building and Cleaning Pools</p>
+                            <p>If you are interested in building your dream pool please let us know and we can begin the process<br>We build all types of pools, Masonary Pools to Fiber Glass Pools you name it and we build it<br>Please reach out to us by <a href="https://demo-ws-pools.co.za/quote">Booking a quote</a> or contact us by <a href="https://demo-ws-pools.co.za/contact">Clicking here</a></p>
+                            <p>Pools Pools Pools its what we do</p>
+                        </div>
+                        
+                      <br>
+                <label style="text-align: center;margin-bottom: 30px;">&copy; 2025 WS POOLS. All rights reserved.</label>
+            </footer>
+        <script>
+            /*
+            <section>
+                <div style="display:flex;flex-direction: column;" class="olt">
+                    <a class="a2" href="https://affiliates.olitt.com/idevaffiliate.php?id=272" style="font-size:18px;">Build and host you website with</a>
+                    <a class="oll" href="https://affiliates.olitt.com/idevaffiliate.php?id=272" >Olitt and Truehost</a>
+                    <div class="olDiv">
+                        <a href="https://affiliates.olitt.com/idevaffiliate.php?id=272">
+                            <img style="display:block;border-radius: 5px;" src="img/o2.jpg" alt="Olitt logo">
+                        </a>
+                    </div>
+                </div>
+            </section>*/
+          //window.alert("The page is still underdevelopement and may not function properly\n\nI have to fix my API's\n\nThanks for visiting\n\nIf you see some code you like you may use it, just share my website in return\n\nAlso make use of my get a quote this is a dummy page so dont worry about being charged as there is nothing to charge for\nWhen I get the review system working leave a review about what you think\n\nAlso the site looks alot better on a PC or laptop\n\nGood night this developers got to sleep, enjoy\n\n\n\n\nLast thing, the images are not mine thats why there is a sample sticker, if you have any issues with these pictures send me an email tomatoes602@gmail.com and I will replace them");
+            //const url="https://demo-ws-pools.co.za/rev";
+            //const url2="https://demo-ws-pools.co.za/read";
+            //const url3="https://demo-ws-pools.co.za/len";
+            //const url1="https://demo-ws-pools.co.za/otpIn";
+            //const updateA="https://demo-ws-pools.co.za/upt";
+            const url="http://localhost:4010/rev";
+            const url2="http://localhost:4010/read";
+            const url3="http://localhost:4010/len";
+            const url1="http://localhost:4010/otpIn";
+            const updateA="http://localhost:4010/upt";
+         // window.alert("Updated");
+            //window.alert("Updated the server\n🤯🤯\n\nProto-type 3.103 version 1010.2");
+            let shake=false;
+            let arrC;
+            let x;
+            
+            let stop=false;
+            let idA="A";
+            let idCount=1;
+            let times=[false,false,false,false,false,false,false,false,false,false];
+            let userIn=null;
+            let revS=new Array();
+            let stopped=false;
+            let num1=0;
+            let d=0;
+            let i1=0;
+            let save=false;
+            let updating=false;
+            let userR=new Object();
+           let err1=false;
+                let cData=0;
+                let loadLen=0;
+                async function loader()
+                {
+                    let stop=false;
+                    //window.alert("id Count:"+idCount);
+                    let end1=false
+                    let once=false;
+                    let load=document.getElementById("Loading");
+                    let bar=document.createElement("div");
+                    bar.id="bar";
+                    let label=document.createElement("label");
+                    label.id="prog";
+                    label.innerHTML="Starting to load reviews";
+                    
+                    load.appendChild(label);
+                    for(let i=0;end1==false;i++)
+                    {
+                        const res=await fetch(url2,
+                        {
+                            method:"POST",
+                            headers:
+                            {
+                                "Content-Type":"application/json"
+                            },
+                            body:JSON.stringify(
+                            {
+                                num:i,
+                                access:once
+                            })
+                        });
+                        
+                        const data=await res.json();
+                        if(data=="Could Not load reviews")
+                        {
+                            label.innerHTML="Could Not load reviews please refresh the page";
+                            end1=true;
+                            err1=true;
+                        }
+                        else
+                        {
+                            userIn=data[1];
+                            revS[i]=userIn;
+                            end1=data[0];
+                            once=true;
+                            let inum=i+1;
+                            label.innerHTML="Loading Review - "+inum.toString();
+                        }
+                    }
+                    
+                    //window.alert("Users have been loaded");
+                    //console.log(revS);
+                    if(err1==false)
+                    {
+                        await updateReviews();
+                    }
+                }loader();
+            //revS
             
             
             
-            <script>
+                let nxt=document.getElementById("nxt");
+                let bck=document.getElementById("bck");
+				let funcObj=new Object();
+				let scrollx=0;
+                let xScrollR;
+                let xScrollL;
+                async function updateReviews()
+                {
+                    i1=0;
+                    let div=document.getElementById("temp1");
+                
+                    let prog=document.getElementById("prog");
+                    prog.innerHTML="Updating Reviews";
+                    let len=revS.length;
+                    // console.log(len);
+                    let img=new Array();
+                    let names=new Array();
+                    let text=new Array();
+                    let rating=new Array();
+                    
+                        let main=document.getElementById("md1");
+                        
+                        
+                    for(let i=0;i<len;i++)
+                    {
+                        let inum=i+1;
+                        prog.innerHTML="Updating Review - "+inum.toString();
+                        img[i]=await revS[i].Picture;
+                        names[i]=await revS[i].Name;
+                        text[i]=await revS[i].Text;
+                        rating[i]=await revS[i].Rating;
+                        let spacing=document.createElement("div");
+                        spacing.setAttribute("class","spacing");
+                        main.appendChild(spacing);
+                        
+                        
+                        let div=document.createElement("div");
+                        //div.id="Div"+i.toString();
+                        div.setAttribute("class","tempD");
+                        spacing.appendChild(div);
+
+                        let div2=document.createElement("div");
+                        //div2.id="Div2"+i.toString();
+                        div2.setAttribute("class","pro1");
+                        div.appendChild(div2);
+
+                        let img1=document.createElement("img");
+                        //img1.id="img"+i.toString();
+                        img1.src=img[i];
+                        img1.setAttribute("class","updateImg");
+                        div2.appendChild(img1);
+
+                        let label=document.createElement("label");
+                        label.innerHTML=names[i];
+                        label.setAttribute("class","names");
+                        //label.id="label"+i.toString();
+                        div.appendChild(label);
+                        
+                        let label2=document.createElement("label");
+                        label2.innerHTML=rating[i]
+                        label2.setAttribute("class","emojiA");
+                        //label2.id="label2"+i.toString();
+                        div.appendChild(label2);
+
+                        let div3=document.createElement("div");
+                        div3.setAttribute("class","textOver");
+                        //div3.id="Div3"+i.toString();
+                        div.appendChild(div3);
+
+                        let p=document.createElement("p");
+                        p.innerHTML=text[i];
+                        //p.id="p"+i.toString();
+                        div3.appendChild(p);
+                        
+                    }
+                    let clone=main.cloneNode(true);
+                    clone.id="md2";
+                    prog.innerHTML="Cloning Reviews";
+                    document.getElementById("Main").appendChild(clone);
+                    
+                    document.getElementById("md1").setAttribute("class","flexS");
+                    document.getElementById("md2").setAttribute("class","flexS");
+                    document.getElementById("Main").setAttribute("class","mainD");
+                    userR=
+                    {
+                        Image:img,
+                        Names:names,
+                        Text:text,
+                        Rating:rating
+                    } 
+                    prog.innerHTML="Building Review Statistics";
+                    let Main=document.getElementById("md1").offsetWidth;
+                    scrollx=main.scrollWidth;
+
+                    //window.alert("ScrollX "+scrollx);
+                    scroll();
+                    let dE=new Array();
+                    let x1=0;
+                    let x2=0;
+                    let x3=0;
+                    let x4=0;
+                    let x5=0;
+                    for(let i=0;i<userR.Rating.length;i++)
+                    {
+                        dE[i]=userR.Rating[i];
+                        if(dE[i]=="🤯")
+                        {
+                            x1++;
+                        }
+                        if(dE[i]=="😄")
+                        {
+                            x2++;
+                        }
+                        if(dE[i]=="😐")
+                        {
+                            x3++;
+                        }
+                        if(dE[i]=="🙁")
+                        {
+                            x4++;
+                        }
+                        if(dE[i]=="😠")
+                        {
+                            x5++;
+                        }
+                    }
+                    let percent=x1+x2+x3+x4+x5;
+                    let ehappy=Math.round(x1/percent*100);
+                    ehappy=ehappy.toString();
+                    let happy=Math.round(x2/percent*100).toString();
+                    happy=happy.toString();
+                    let nt=Math.round(x3/percent*100).toString();
+                    nt=nt.toString();
+                    let sad=Math.round(x4/percent*100).toString();
+                    sad=sad.toString();
+                    let dis=Math.round(x5/percent*100).toString();
+                    dis=dis.toString();
+                    let a1=document.getElementById("x1");
+                    a1.innerHTML="🤯 "+ehappy+"%  -  Extremely Happy";
+                    let a2=document.getElementById("x2");
+                    a2.innerHTML="😄 "+happy+"%  -  Happy";
+                    let a3=document.getElementById("x3");
+                    a3.innerHTML="😐 "+nt+"%  -  Neutral";
+                    let a4=document.getElementById("x4");
+                    a4.innerHTML="🙁 "+sad+"%  -  Unhappy";
+
+                    let a5=document.getElementById("x5");
+                    a5.innerHTML="😠 "+dis+"%  -  Angry";
+                    //window.alert(happy);
+                    //🤯 &#128515;  🙁 😠
+                    let xValues = ["🤯", "😄", "😐", "🙁", "😠"];
+                    let yValues = [x1, x2, x3, x4, x5];
+                
+
+                    let barColors = ["rgba(255,255,255,0.5)", "rgba(51, 0, 255,0.5)","rgba(51, 0, 255,0.5)","rgba(51, 0, 255,0.5)","rgba(51, 0, 255,0.5)"];
+
+                    new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                    labels: xValues,
+                    datasets: [{
+                        data: yValues,
+                      	label:"Graph Representing Customer Reviews",
+                      	backgroundColor: barColors,
+                      borderColor: [
+                        "rgb(255, 255, 255)",
+                        "rgb(51, 0, 255)",
+                        "rgb(51, 0, 255)",
+                        "rgb(51, 0, 255)",
+                        "rgb(51, 0, 255)",
+                        "rgb(51, 0, 255)",
+                        "rgb(51, 0, 255)"
+                      ],
+                      borderWidth: 1
+                    }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                        display: true,
+                        text: "Customer Satisfaction Rating"
+                        },
+                        scales: {
+                        yAxes: [{ticks: {min:0, max:30}}]
+                        }
+                    }
+                    });
+
+                let load=document.getElementById("Loading");
+                load.remove();
+            }
+            let imgCount=3;let xPo=0;
+            let net2=document.getElementById("net2");
+            let wid=window.innerWidth;
+
+            let mainDiv=document.getElementById("Main");
+            let id1=1;
+            let id2=3;
+            let setOnceR=false;
+            let setOnceL=false;
+            let mDiv=document.getElementById("Main");
+            console.log(scrollx+" The scroll position");
+            function scroll()
+            {
+                function scrollInterval()
+                {
+                    xPo=xPo+0.8;
+                    
+                    mDiv.scrollLeft=xPo;
+                    if(xPo>=scrollx)
+                    {
+                        xPo=0;
+                    }
+                }
+                if(setOnceR==false)
+                {
+                    xScrollR=setInterval(scrollInterval,1);
+                    setOnceR=true;
+                    setOnceL=false;
+                    
+                    //window.alert("right");
+
+                }   
+            }
+            function scrollxleft()
+            {
+                
+                function lft()
+                {   
+                    xPo=xPo-0.8;
+                    
+                    mDiv.scrollLeft=xPo;
+                    if(xPo<=0)
+                    {
+                        xPo=scrollx;
+                    }
+                }
+                if(setOnceL==false)
+                {
+                    xScrollL=setInterval(lft,1);
+                    setOnceL=true;
+                    setOnceR=false;
+                    
+                    //window.alert("left");
+                }
+            }  
+            net2.addEventListener("mousedown",()=>
+            {
+                scroll();
+                
+                clearInterval(xScrollL);
+                xPo=xPo+300;
+                if(xPo>=scrollx)
+                {
+                    xPo=0;
+                }
+                
+                mDiv.scrollLeft=xPo;
+                console.log(xPo);
+                // Create a copy of the table and adds it to the scrollable element
+                
+                
+                //console.log(main.scrollX+" Scroll position");
+
+                });
+                let net1=document.getElementById("net1");
+                net1.addEventListener("mousedown",()=>
+                {
+                    clearInterval(xScrollR);
+                    scrollxleft();
+                    xPo=xPo-300;
+                    if(xPo<=0)
+                    {
+                        xPo=scrollx;
+                    }
+                   
+                    mDiv.scrollLeft=xPo;
+                    console.log(xPo);
+                });
+
+            async function cyberShake()
+            {
+                const res=await fetch(url3,
+                {
+                    method:"POST",
+                    headers:
+                    {
+                        "Content-Type":"application/json"
+                    },  
+                    body:JSON.stringify(
+                    {
+                        
+                    })
+                });
+                const arrayL=await res.json();
+                arrC=arrayL;
+                //window.alert(arrC);
+            }
+            try
+            {
+                //cyberShake();
+                shake=true;
+            }
+            catch(err)
+            {
+
+            }
+            function back2()
+            {
+                let two=document.getElementById("two");
+                two.setAttribute("class","two");
+                let one=document.getElementById("one");
+                one.setAttribute("class","oneOn");
+            }
+            function back3()
+            {
+                let three=document.getElementById("three");
+                three.setAttribute("class","three");
+                let two=document.getElementById("two");
+                two.setAttribute("class","twoOn");
+            }
+            function back4()
+            {
+                let four=document.getElementById("four");
+                four.setAttribute("class","four");
+                let three=document.getElementById("three");
+                three.setAttribute("class","threeOn");
+            }
+            function next1()
+            {
+                let pic=document.getElementById("pic");
+                if(pic.src!="")
+                {
+                    let one=document.getElementById("one");
+                    one.setAttribute("class","one");
+                    let two=document.getElementById("two");
+                    two.setAttribute("class","twoOn");
+                }
+                else
+                {
+                    window.alert("Please Upload a picture to continue");
+                }
+            }
+            function next2()
+            {
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+                if(email!="" && name!="" && email!=undefined && name!=undefined)
+                {
+                    let two=document.getElementById("two");
+                    two.setAttribute("class","two");
+                    let three=document.getElementById("three");
+                    three.setAttribute("class","threeOn");
+                }
+                else
+                {
+                    window.alert("Please enter your full name and email to continue");                    
+                }
+            }
+            function next3()
+            {
+                let text=document.getElementById("text").value;
+                if(text!="" && text!=undefined)
+                {
+                    let three=document.getElementById("three");
+                    three.setAttribute("class","three");
+                    let four=document.getElementById("four");
+                    four.setAttribute("class","fourOn");
+                }
+                else
+                {
+                    window.alert("Please complete the review");
+                }
+                
+            }
+            let buttR=document.getElementById("review");
+            let pic=document.getElementById("profile");
+            let review=new Array();
+
+            let emj=[false];
+
+            let optIn;
+            let s1=document.getElementById("s1");
+            let c1=document.getElementById("c1");
+            c1.addEventListener("click",async()=>
+            {
+                let content=document.getElementById("content");
+                let otpDiv=document.getElementById("otpDiv");
+                otpDiv.setAttribute("class","offTemp");
+                content.setAttribute("class","onTemp");
+            });
+            s1.addEventListener("click",async()=>
+            {
+                let label=document.getElementById("l1")
+                let opt=document.getElementById("opt").value;
+                if(optIn!=opt)
+                    {
+                        label.innerHTML="Sorry incorrect pin please try again";
+                    }
+                    else
+                    {
+                        //window.alert("Being sent to server");
+                        let content=document.getElementById("content");
+                        let otpDiv=document.getElementById("otpDiv");
+                        otpDiv.setAttribute("class","offTemp");
+                        content.setAttribute("class","offTemp");
+                        window.alert("Sending review");
+                        const res=await fetch(url,
+                        {
+                            method:"POST",
+                            headers:
+                        {
+                            "Content-Type":"application/json"
+                        },
+                        body:JSON.stringify(
+                        {
+                            array:review
+                        })
+                    });
+                    const data=await res.json();
+                      window.alert(data+"\nRefresh the page to continue");
+                   // window.alert("The otp\n"+data+"\nAlso sent to your email address\nWill remove the alert here later after testing");
+                    //window.alert("Updating reviews");
+                    
+                    /*
+                        review[0]=name;
+                        review[1]=email;
+                        review[2]=text;
+                        review[3]=emj[1];
+                        review[4]=document.getElementById("pic").src;
+                    */
+                    let reviews=document.getElementById("reviews");
+                    reviews.setAttribute("class","revws");
+                    let review1=document.getElementById("review");
+                    review1.setAttribute("class","sub1");
+                }
+            });
+            async function submit()
+            {
+                
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+
+                let text=document.getElementById("text").value;
+                let pic=document.getElementById("pic").src;
+                let sw1=false;
+                let sw2=false;
+                let sw3=false;
+                
+                //emj
+                let enter=false;
+                if(name!="" && name!=undefined)
+                {
+                    sw1=true;
+                }
+                if(email!="" && email!=undefined)
+                {
+                    sw2=true;
+                }
+                if(text!="" && text!=undefined)
+                {
+                    sw3=true;
+                }
+                
+                if(sw1==true && sw2==true && emj[0]==true && sw3==true && pic!="")
+                {
+                    enter=true;
+                }
+                else 
+                {
+                    window.alert("Please complete the form to continue");
+                }
+                if(enter==true)
+                {
+                    review[0]=name;
+                    review[1]=email;
+                    review[2]=text;
+                    review[3]=emj[1];
+                    review[4]=document.getElementById("pic").src;
+                    
+                    let content=document.getElementById("content");
+                    content.setAttribute("class","offTemp");
+
+                    let otpDiv=document.getElementById("otpDiv");
+                    otpDiv.setAttribute("class","onTemp");
+                    let label=document.getElementById("l1");
+                    label.innerHTML=review[0]+" check your emails to get your otp<br>We sent it to this address "+review[1];
+					window.alert("Sending OTP");
+                    
+                    const res=await fetch(url1,
+                        {
+                            method:"POST",
+                            headers:
+                            {
+                                "Content-Type":"application/json"
+                            },
+                            body:JSON.stringify(
+                            {
+                                Email:review[1]
+                            })
+                        });
+                        const opt=await res.json();
+                        optIn=opt;
+                       // window.alert("The otp\n"+opt+"\nAlso sent to your email address\nWill remove the alert here later after testing");
+                                            
+                }
+            }
+            pic.addEventListener("change",async()=>
+            {
+                let swi=false;
+                if (pic.files.length > 0) 
+                {
+                    //100000 Bytes	0.1 MB
+                    //1029576
+                    const fileSize = pic.files.item(0).size;
+                    let fileMb = fileSize;
+                    fileMb=Math.round(fileMb);
+                    
+                    if (fileMb >= 10000000) 
+                    {
+                        pic.innerHTML = "Please select a file less than 10MB.";
+                        
+                    }
+                    else 
+                    {
+                        swi=true;
+                        pic.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
+                        
+                    }
+                }
+                if(swi==true)
+                {
+                    try
+                    {
+                    
+                        let fr = new FileReader;
+                        let { resolve, reject, promise } = Promise.withResolvers();
+                        try
+                        {
+                            fr.onload = (e) => resolve(e.target.result);
+                            fr.readAsDataURL(pic.files[0]);
+                            review[0]=await promise;
+                            let pic1=document.getElementById("pic");
+                            pic1.src=review[0];
+                            pic1.setAttribute("style","width:300px;height:300px;border-radius: 10000px; padding:10px;background-color: rgba(255, 255, 255, 0.478); border:2px solid white;")
+                        }
+                        catch(err)
+                        {
+                            console.log(err);
+                        }
+    
+                    }
+                    catch(err)
+                    {
+                        console.log(err);
+                    }
+                }
+                else
+                {
+                    window.alert("Please choose a different picture it exceeds that maximum size of 10MB");
+                }
+            });
+            function ch1()
+            {
+                let emoji1=document.getElementById("sd");
+                emoji1.setAttribute("class","on");
+
+                document.getElementById("sad").setAttribute("class","off");
+                document.getElementById("nut").setAttribute("class","off");
+                document.getElementById("happy").setAttribute("class","off");
+                document.getElementById("ehappy").setAttribute("class","off");
+                emj[0]=true;
+                emj[1]=emoji1.innerHTML;
+                
+            }
+            function ch2()
+            {
+                let emoji1=document.getElementById("sad");
+                emoji1.setAttribute("class","on");
+
+                document.getElementById("sd").setAttribute("class","off");
+                document.getElementById("nut").setAttribute("class","off");
+                document.getElementById("happy").setAttribute("class","off");
+                document.getElementById("ehappy").setAttribute("class","off");
+                emj[0]=true;
+                emj[1]=emoji1.innerHTML;
+
+            }
+            function ch3()
+            {
+                let emoji1=document.getElementById("nut");
+                emoji1.setAttribute("class","on");
+
+                document.getElementById("sad").setAttribute("class","off");
+                document.getElementById("sd").setAttribute("class","off");
+                document.getElementById("happy").setAttribute("class","off");
+                document.getElementById("ehappy").setAttribute("class","off");
+                emj[0]=true;
+                emj[1]=emoji1.innerHTML;
+
+            }
+            function ch4()
+            {
+                let emoji1=document.getElementById("happy");
+                emoji1.setAttribute("class","on");
+
+                document.getElementById("sad").setAttribute("class","off");
+                document.getElementById("nut").setAttribute("class","off");
+                document.getElementById("sd").setAttribute("class","off");
+                document.getElementById("ehappy").setAttribute("class","off");
+                emj[0]=true;
+                emj[1]=emoji1.innerHTML;
+
+            }
+            function ch5()
+            {
+                let emoji1=document.getElementById("ehappy");
+                emoji1.setAttribute("class","on");
+
+                document.getElementById("sad").setAttribute("class","off");
+                document.getElementById("nut").setAttribute("class","off");
+                document.getElementById("happy").setAttribute("class","off");
+                document.getElementById("sd").setAttribute("class","off");
+                emj[0]=true;
+                emj[1]=emoji1.innerHTML;
+            }
+            buttR.addEventListener("click",()=>
+            {
+                let reviews=document.getElementById("reviews");
+                reviews.setAttribute("class","one");
+                let content=document.getElementById("content");
+                content.setAttribute("class","onTemp");
+                let scr=content.offsetTop;
+                window.scrollY=scr;
+                let one=document.getElementById("one");
+                one.setAttribute("class","oneOn");
+                let review=document.getElementById("review");
+                review.setAttribute("class","one");
+            });
+                let wind=window.innerWidth;
+                let once=false;
+                function sticky()
+                {
+                  //  console.log("In the sticky function");
+                    let offset=document.getElementById("stick").offsetTop;
+                    
+                    
+                    let div=document.getElementById("stick");
+                    window.addEventListener("scroll",()=>
+                    {
+                        let scroll=window.scrollY;
+                        console.log(scroll+" "+offset);
+                        if(scroll>offset-300)
+                        {
+                            if(once==false)
+                            {
+                                numbers();
+                                once=true;
+                            }
+                        }
+                        
+                    })
+                }
+                sticky()
+                console.log(wind);
+                if(wind<980)
+                {
+                    /*let temp=document.getElementById("temp");
+                    temp.remove();
+                    let label=document.createElement("label");
+                    label.innerHTML="Sorry mobile devices are currently not supported.<br><br>Under developement<br><br>Please Open this page from your laptop or PC to continue";
+                    label.setAttribute("class","label");
+
+                    let div1=document.createElement("div");
+                    div1.id="div1";
+
+                    div1.setAttribute("class","div1");
+
+                    document.getElementById("body").appendChild(div1);
+                    document.getElementById("div1").appendChild(label);*/
+
+                }else{
                     console.log("script");
+                    let cD=1;
+                    let set=false;
+                    let set1=false;
+                    let imgArr=new Array();
+                    for(let i=1;i<6;i++)
+                    {
+                        let i1=i+1;
+                        imgArr[i]=document.createElement("img");
+                        imgArr[i].src="img/"+i.toString()+".jpg";
+                    }
+                    let direc=1;
+                    function swap(img,dir)
+                    {
+                        let img1=document.getElementById("img1");
+                        let img2=document.getElementById("img2");
+                        let img3=document.getElementById("img3");
+                        if(dir==true)
+                        {
+                            direc--;
+                            if(direc==0)
+                            {
+                                direc=5;
+                            }
+                            img1.src=img2.src;
+                            img2.src=img3.src;
+                            let d=direc;
+                            img3.src=imgArr[d].src;
+                        }
+                        else
+                        {
+                            direc++;
+                            if(direc==5)
+                            {
+                                direc=1;
+                            }
+                            img3.src=img2.src;
+                            img2.src=img1.src;
+                            let d=direc;
+                            img1.src=imgArr[d].src;
+                            
+                        }
+                    }
+                    function gal()
+                    {
+                        window.location.href="https://demo-ws-pools.co.za/gal";
+                    }
                     function contact()
                     {
-                        window.location.href="http://localhost:4010/contact";
+                        window.location.href="https://demo-ws-pools.co.za/contact";
                     }
                     function onlineQuote()
                     {
-                        window.location.href="http://localhost:4010/quote"
+                        window.location.href="https://demo-ws-pools.co.za/quote"
                         //"https://clipart-library.com/clipart/790313.htm";
                         console.log("Loading next page");
                     }
-                    let once=false;
-                    if(once==false){
-                    window.addEventListener('scroll', function(event) {
- // Get the current scroll position
- const scroll = window.scrollY;
- if(scroll>=390)
- {
-    
-    if(once==false)
-    {
-        numbers();
-        once=true;
-    }
-
- }
- // Perform actions based on the scroll position
- // …
-});}
-else
-{
-    window.addEventListener('scroll', function(event){console.log("no event")});
-}
+                    
                 function numbers()
                 {
                     console.log("numbers");
@@ -196,40 +1328,56 @@ else
                 {
                     ctx.beginPath()
                     ctx.moveTo(xM,yM1);
-                    const gradient = ctx.createLinearGradient(0, 0, 170, 0);
-                    gradient.addColorStop("0.7","rgb(0, 217, 255)");
-                    gradient.addColorStop("1.0","rgb(51, 0, 255)" );
+                    let win1=window.innerWidth/3+window.innerWidth/2;
+                    const gradient1 = ctx.createLinearGradient(0, 0,win1, 0);
+                    gradient1.addColorStop("0.2","rgb(0, 0, 0)");
+                    gradient1.addColorStop("0.7","rgb(0, 0, 0)" );
+                    gradient1.addColorStop("1","rgb(0, 0, 0)");
+                    
+
+// Fill with gradient
+                    ctx.strokeStyle = gradient1;
+                    
+                    ctx.lineWidth=83;
+                    
+                    ctx.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);
+        
+                    ctx.stroke();
+                    ctx.closePath()
+
+                    ctx.beginPath()
+                    ctx.moveTo(xM,yM1);
+                    let win=window.innerWidth/3+window.innerWidth/2;
+                    const gradient = ctx.createLinearGradient(0, 0,win, 0);
+                    gradient.addColorStop("0.2","rgb(5, 0, 28)");
+                    gradient.addColorStop("0.7","rgb(51, 0, 255)" );
+                    gradient.addColorStop("1","rgb(5, 0, 28)");
                     
 
 // Fill with gradient
                     ctx.strokeStyle = gradient;
+                    
                     ctx.lineWidth=80;
                     
                     ctx.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);
+        
                     ctx.stroke();
                     ctx.closePath()
-                    
-                    
-                    
-
-                    
-
-                   
                     
                 }function draw1()
                 {
                     ctx1.beginPath()
-                    ctx1.moveTo(xM-50,yM1);
+                    ctx1.moveTo(xM,yM1);
                     const gradient1 = ctx.createLinearGradient(0, 0, 170, 0);
-                    gradient1.addColorStop("0.7","rgb(0, 217, 255)");
-                    gradient1.addColorStop("1.0","rgb(51, 0, 255)" );
+                    gradient1.addColorStop("0.7","rgb(0, 0, 0)");
+                    gradient1.addColorStop("1.0","rgb(255, 255, 255)" );
                     
 
 // Fill with gradient
                     ctx1.strokeStyle = gradient1;
                     ctx1.lineWidth=200;
                     
-                    ctx1.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);
+                    ctx1.bezierCurveTo(xS, yS, xS1, yS1, xE, yM);;
                     ctx1.stroke();
                     ctx1.closePath()
                 }
@@ -282,7 +1430,7 @@ else
                     }
                     
                     let image=canvas.toDataURL("image/png");
-                    let image1=divCan.toDataURL("image/png");
+                   // let image1=divCan.toDataURL("image/png");
                     
                     document.getElementById("imgW").src=image;
                     document.getElementById("imgW1").src=image;
@@ -327,7 +1475,7 @@ else
                         setTimeout(timeOut,3000);
                     }
                     
-                }
+                }}
             </script>
     </body>
 </html>
