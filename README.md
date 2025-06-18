@@ -20,3 +20,8 @@ Then we put it on a server after I finish the backend. Look for advertising plac
 www.demoPoolWebsite.com
 
 
+Date today
+Wednesday, 18 June 2025
+
+Not sure if all the code still works. I had it running on a server. It was working, you may re-use the code and not the images 
+
